@@ -5,52 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6028eece-2948-4731-ab72-1937a8964a64" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/delivery-service/src/main/java/ru/liga/DeliveryApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/delivery-service/src/main/java/ru/liga/deliveryController/DeliveryController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kitchen-service/src/main/java/ru/liga/KitchenApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/migration/src/main/java/ru/liga/MigrationApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/ru-liga-food-service.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/food-service/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/food-service/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/food-service/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/food-service/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/food-service/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/food-service/delivery-service/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/delivery-service/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/food-service/delivery-service/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/food-service/delivery-service/src/main/java/ru/liga/deliveryController/DeliveryController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/food-service/delivery-service/src/test/java/ru/liga/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/delivery-service/src/test/java/ru/liga/AppTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/food-service/dependency_bom/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/food-service/kitchen-service/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/food-service/kitchen-service/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/food-service/kitchen-service/src/main/java/ru/liga/kitchenController/KitchenController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/food-service/kitchen-service/src/test/java/ru/liga/AppTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/food-service/migration/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/food-service/migration/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/delivery-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/food-service/migration/src/main/resources/aplication.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/food-service/migration/src/main/resources/db/changelog/main-changelog.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/food-service/migration/src/main/resources/db/changelog/v1/v1-accumulate-changelog.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/food-service/migration/src/main/resources/db/changelog/v1/v1-create-restaurant-table-changelog.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/food-service/migration/src/test/java/ru/liga/AppTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/food-service/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/food-service/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/food-service/notification-service/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/food-service/notification-service/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/food-service/notification-service/src/main/java/ru/liga/App.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/food-service/notification-service/src/test/java/ru/liga/AppTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/food-service/order-service/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/food-service/order-service/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/food-service/order-service/src/main/java/ru/liga/orderController/OrderController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/food-service/order-service/src/main/java/ru/liga/orderDto/Customers.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/food-service/order-service/src/main/java/ru/liga/orderDto/OrderI_items.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/food-service/order-service/src/main/java/ru/liga/orderDto/Orders.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/food-service/order-service/src/test/java/ru/liga/AppTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/food-service/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/delivery-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kitchen-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/kitchen-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migration/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/migration/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
