@@ -3,22 +3,20 @@ package ru.liga.kitchenController;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.bind.annotation.PathVariable;
+import ru.liga.dto.RequestMenu_itemsDto;
+import ru.liga.dto.ResponseOrderItemDto;
 
-@Controller
+@RestController
 public class KitchenController {
 
-    @GetMapping("/orderItem")
-    public String itemsToBasket(){
+    @GetMapping("/order/{status}")
+    @ResponseBody
+    public ResponseOrderItemDto orerInfo(@PathVariable("status") String status){
 
-        return  "показ доступных заказов для работы";
+       ResponseOrderItemDto responseOrderItemDto = new ResponseOrderItemDto();
+       responseOrderItemDto.setMenu_items(new RequestMenu_itemsDto());
+
+        return responseOrderItemDto ;
     }
-
-
-    @PutMapping("/orderItem/{status}")
-    public String updateStatus(@PathVariable("status") String status){
-
-        return  "Статус заказа изменён";
-    }
-
 
 }

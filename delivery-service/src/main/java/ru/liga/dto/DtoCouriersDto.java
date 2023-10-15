@@ -1,6 +1,6 @@
 package ru.liga.dto;
 
-public class DtoCouriers {
+public class DtoCouriersDto {
 
     long id;
     String phone;

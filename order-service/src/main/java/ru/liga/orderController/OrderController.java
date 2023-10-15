@@ -1,64 +1,46 @@
 package ru.liga.orderController;
 
 
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
-import ru.liga.orderDto.Orders;
+import ru.liga.dto.RequestMenu_itemsDto;
+import ru.liga.dto.ResponseItemsDto;
+import ru.liga.dto.ResponseRestoranNameDto;
+import ru.liga.orderDto.ResponseCreatNewOrderDto;
+import ru.liga.orderDto.ResponseOrderDto;
 
-@Controller
+@RestController
 public class OrderController {
 
+    @GetMapping("/order")
+    @ResponseBody
+    public ResponseOrderDto getOrder (){
 
-        @GetMapping("/registration")
-        public String registration (){
+        ResponseOrderDto requestOrderDto = new ResponseOrderDto();
+       requestOrderDto.setItems(new ResponseItemsDto());
+       requestOrderDto.setRestaurant(new ResponseRestoranNameDto());
 
-            return "форма регистрации пользователя";
-        }
-        @PostMapping("/registration")
-        public void addUser (){
+        return requestOrderDto ;
+    }
+        @GetMapping("orders/{id}")
+        @ResponseBody
+        public ResponseOrderDto getOrderById (@PathVariable("id") long id){
 
-            //Добавление пользователя в базу данных
-        }
+               ResponseOrderDto requestOrderDto = new ResponseOrderDto();
+               requestOrderDto.setId(1);
+               requestOrderDto.setItems(new ResponseItemsDto());
+               requestOrderDto.setTimestamp(30);
+               requestOrderDto.setRestaurant(new ResponseRestoranNameDto());
 
-        @GetMapping("/restaurant")
-        public String restaurant (){
-
-            return "выдаём списак доступных ресторвнов";
-        }
-        @GetMapping("/restaurant/{id}")
-        public String menuRestaurant(@PathVariable("id") long id){
-
-            return "выдаём меню в зависимости от выбранного ресторана";
-        }
-        @PostMapping("/restaurant/menu/{id}")
-        public void addItemsToBasket(@PathVariable("id") long id){
-
-            //реализация добавления товаров в корзину
+            return requestOrderDto ;
         }
 
-        @DeleteMapping("/restaurant/menu/{id}")
-        public void deleteItemsToBasket(@PathVariable("id") long id){
+    @PostMapping("/order")
+    @ResponseBody
+    public ResponseCreatNewOrderDto create (@PathVariable("id") long id, @PathVariable("menu_items") RequestMenu_itemsDto requestMenu_items){
 
-            //реализация удаления товаров из корзины
-        }
+            ResponseCreatNewOrderDto responseCreatNewOrderDto = new ResponseCreatNewOrderDto();
 
-        @PutMapping("/restaurant/menu/{id}")
-        public void updateItemsToBasket(@PathVariable("id") long id){
-
-            //реализация редактирования товаров в корзине
-        }
-
-        @GetMapping("/basket/{id}")
-        public String itemsToBasket(@PathVariable("id")long id){
-
-            return  "Вывод всех товаров из корзины закрепленных за пользователем";
-        }
-        @PostMapping("/create")
-        public String createOrder (@RequestBody Orders orders){
-
-            //Создание заказа
-                return "новый заказ создан";
-        }
-
+        return responseCreatNewOrderDto ;
+    }
 
 }
