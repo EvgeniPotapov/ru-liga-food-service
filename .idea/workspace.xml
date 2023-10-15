@@ -1,11 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="bd670b27-0b2f-49b6-9f91-76e5dab439dd" name="Changes" comment="" />
+    <list default="true" id="6028eece-2948-4731-ab72-1937a8964a64" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/delivery-service/src/main/java/ru/liga/DeliveryApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/delivery-service/src/main/java/ru/liga/deliveryController/DeliveryController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kitchen-service/src/main/java/ru/liga/KitchenApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/migration/src/main/java/ru/liga/MigrationApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/ru-liga-food-service.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food-service/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/food-service/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/food-service/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/food-service/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/food-service/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/food-service/delivery-service/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/delivery-service/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food-service/delivery-service/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/food-service/delivery-service/src/main/java/ru/liga/deliveryController/DeliveryController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/food-service/delivery-service/src/test/java/ru/liga/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/delivery-service/src/test/java/ru/liga/AppTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food-service/dependency_bom/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/food-service/kitchen-service/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/food-service/kitchen-service/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/food-service/kitchen-service/src/main/java/ru/liga/kitchenController/KitchenController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/food-service/kitchen-service/src/test/java/ru/liga/AppTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/food-service/migration/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/food-service/migration/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/delivery-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food-service/migration/src/main/resources/aplication.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/food-service/migration/src/main/resources/db/changelog/main-changelog.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/food-service/migration/src/main/resources/db/changelog/v1/v1-accumulate-changelog.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/food-service/migration/src/main/resources/db/changelog/v1/v1-create-restaurant-table-changelog.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/food-service/migration/src/test/java/ru/liga/AppTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/food-service/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/food-service/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/food-service/notification-service/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/food-service/notification-service/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/food-service/notification-service/src/main/java/ru/liga/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/food-service/notification-service/src/test/java/ru/liga/AppTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/food-service/order-service/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/food-service/order-service/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/food-service/order-service/src/main/java/ru/liga/orderController/OrderController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/food-service/order-service/src/main/java/ru/liga/orderDto/Customers.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/food-service/order-service/src/main/java/ru/liga/orderDto/OrderI_items.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/food-service/order-service/src/main/java/ru/liga/orderDto/Orders.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/food-service/order-service/src/test/java/ru/liga/AppTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/food-service/pom.xml" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -13,33 +71,187 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="2WfueSukHFQQkx69ZlHuwMRquFa" />
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="MavenRunner">
+    <option name="jreName" value="corretto-11" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectId" id="2WNmhBECXTR778m0M4ymyvTjApN" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/ru-liga-food-service/food-service",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;corretto-11&quot;,
+    &quot;last_directory_selection&quot;: &quot;D:/ru-liga-food-service/food-service/dependency_bom/src/main/java/ru/liga&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/ru-liga-food-service&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.ignored.files&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;04f0a2dad0cf8a2e5cae16f65c7d5455&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
+    ]
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\ru-liga-food-service\food-service\migration\src\main\resources\db\changelog\changeset" />
+      <recent name="D:\ru-liga-food-service\food-service\migration\src\main\resources\db\changelog" />
+      <recent name="D:\ru-liga-food-service\food-service\migration\src\main\resources" />
+      <recent name="D:\ru-liga-food-service\food-service\src\main\resources\db\changelog\changeset" />
+      <recent name="D:\ru-liga-food-service\food-service\src\main\resources\db\changelog" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn install" />
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.DeliveryApplication">
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ru.liga.App" />
+      <module name="notification-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.liga.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DeliveryApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ru.liga.DeliveryApplication" />
+      <module name="delivery-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.liga.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="KitchenApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ru.liga.KitchenApplication" />
+      <module name="kitchen-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.liga.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MigrationApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ru.liga.MigrationApplication" />
+      <module name="migration" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.liga.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OrderApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ru.liga.OrderApplication" />
+      <module name="order-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.liga.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="order-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.DeliveryApplication" />
+        <item itemvalue="Application.App" />
+        <item itemvalue="Application.MigrationApplication" />
+        <item itemvalue="Application.KitchenApplication" />
+        <item itemvalue="Application.OrderApplication" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="bd670b27-0b2f-49b6-9f91-76e5dab439dd" name="Changes" comment="" />
-      <created>1697136053306</created>
+      <changelist id="6028eece-2948-4731-ab72-1937a8964a64" name="Changes" comment="" />
+      <created>1696581549081</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1697136053306</updated>
-      <workItem from="1697136053442" duration="62000" />
+      <updated>1696581549081</updated>
+      <workItem from="1696581550171" duration="49000" />
+      <workItem from="1696585064344" duration="41000" />
+      <workItem from="1697136126378" duration="13188000" />
+      <workItem from="1697154499385" duration="675000" />
+      <workItem from="1697226950433" duration="360000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="org.springframework.amqp.AmqpConnectException" package="org.springframework.amqp" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
