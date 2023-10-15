@@ -5,12 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6028eece-2948-4731-ab72-1937a8964a64" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/delivery-service/src/main/java/ru/liga/dto/DtoCouriers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kitchen-service/src/main/java/ru/liga/dto/Restaurant_menu_items.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kitchen-service/src/main/java/ru/liga/dto/Restaurants.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/delivery-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/delivery-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kitchen-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/kitchen-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/migration/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/migration/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
