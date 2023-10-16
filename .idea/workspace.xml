@@ -5,20 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6028eece-2948-4731-ab72-1937a8964a64" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/delivery-service/src/main/java/ru/liga/dto/CustomerAddressDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/delivery-service/src/main/java/ru/liga/dto/DeliveryDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/delivery-service/src/main/java/ru/liga/dto/RestaurantAddressDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/migration/src/main/resources/db/changelog/v1/v1-create-couriers-table.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/migration/src/main/resources/db/changelog/v1/v1-create-customers-table.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/migration/src/main/resources/db/changelog/v1/v1-create-menu-table.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/migration/src/main/resources/db/changelog/v1/v1-create-order-table.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/migration/src/main/resources/db/changelog/v1/v1-create-order_items-table.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/delivery-service/src/main/java/ru/liga/deliveryController/DeliveryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/delivery-service/src/main/java/ru/liga/deliveryController/DeliveryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/delivery-service/src/main/java/ru/liga/dto/DtoCouriersDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kitchen-service/src/main/java/ru/liga/dto/RequestMenu_itemsDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/kitchen-service/src/main/java/ru/liga/dto/Menu_itemsDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kitchen-service/src/main/java/ru/liga/dto/ResponseItemsDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/orderDto/ItemsDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kitchen-service/src/main/java/ru/liga/dto/ResponseOrderItemDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/kitchen-service/src/main/java/ru/liga/dto/OrderItemDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kitchen-service/src/main/java/ru/liga/dto/ResponseRestoranNameDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/orderDto/RestoranNameDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kitchen-service/src/main/java/ru/liga/kitchenController/KitchenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/kitchen-service/src/main/java/ru/liga/kitchenController/KitchenController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/orderController/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/orderController/OrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/orderDto/ResponseCreatNewOrderDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/orderDto/CreatNewOrderDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/orderDto/ResponseOrderDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/orderDto/OrderDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migration/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/migration/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migration/src/main/resources/aplication.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/migration/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migration/src/main/resources/db/changelog/v1/v1-accumulate-changelog.xml" beforeDir="false" afterPath="$PROJECT_DIR$/migration/src/main/resources/db/changelog/v1/v1-accumulate-changelog.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migration/src/main/resources/db/changelog/v1/v1-create-restaurant-table-changelog.sql" beforeDir="false" afterPath="$PROJECT_DIR$/migration/src/main/resources/db/changelog/v1/v1-create-restaurant-table-changelog.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migration/src/test/java/ru/liga/AppTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +96,7 @@
       <command value="mvn install" />
     </option>
   </component>
-  <component name="RunManager" selected="Application.DeliveryApplication">
+  <component name="RunManager" selected="Application.MigrationApplication">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ru.liga.App" />
       <module name="notification-service" />
@@ -174,11 +171,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MigrationApplication" />
         <item itemvalue="Application.DeliveryApplication" />
         <item itemvalue="Application.KitchenApplication" />
         <item itemvalue="Application.OrderApplication" />
         <item itemvalue="Application.App" />
-        <item itemvalue="Application.MigrationApplication" />
       </list>
     </recent_temporary>
   </component>
