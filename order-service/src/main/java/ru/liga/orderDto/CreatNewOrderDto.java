@@ -5,7 +5,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class ResponseCreatNewOrderDto {
+public class CreatNewOrderDto {
 
     private  long id;
     private String secret_payment_url;

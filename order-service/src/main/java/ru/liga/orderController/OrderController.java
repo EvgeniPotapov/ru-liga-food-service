@@ -2,45 +2,42 @@ package ru.liga.orderController;
 
 
 import org.springframework.web.bind.annotation.*;
-import ru.liga.dto.RequestMenu_itemsDto;
-import ru.liga.dto.ResponseItemsDto;
-import ru.liga.dto.ResponseRestoranNameDto;
-import ru.liga.orderDto.ResponseCreatNewOrderDto;
-import ru.liga.orderDto.ResponseOrderDto;
+import ru.liga.dto.Menu_itemsDto;
+import ru.liga.orderDto.ItemsDto;
+import ru.liga.orderDto.RestoranNameDto;
+import ru.liga.orderDto.CreatNewOrderDto;
+import ru.liga.orderDto.OrderDto;
 
 @RestController
 public class OrderController {
 
     @GetMapping("/order")
-    @ResponseBody
-    public ResponseOrderDto getOrder (){
+    public OrderDto getOrder (){
 
-        ResponseOrderDto requestOrderDto = new ResponseOrderDto();
-       requestOrderDto.setItems(new ResponseItemsDto());
-       requestOrderDto.setRestaurant(new ResponseRestoranNameDto());
+        OrderDto requestOrderDto = new OrderDto();
+       requestOrderDto.setItems(new ItemsDto());
+       requestOrderDto.setRestaurant(new RestoranNameDto());
 
         return requestOrderDto ;
     }
         @GetMapping("orders/{id}")
-        @ResponseBody
-        public ResponseOrderDto getOrderById (@PathVariable("id") long id){
+        public OrderDto getOrderById (@PathVariable("id") long id){
 
-               ResponseOrderDto requestOrderDto = new ResponseOrderDto();
-               requestOrderDto.setId(1);
-               requestOrderDto.setItems(new ResponseItemsDto());
-               requestOrderDto.setTimestamp(30);
-               requestOrderDto.setRestaurant(new ResponseRestoranNameDto());
+               OrderDto orderDto = new OrderDto();
+               orderDto.setId(1);
+               orderDto.setItems(new ItemsDto());
+               orderDto.setTimestamp(30);
+               orderDto.setRestaurant(new RestoranNameDto());
 
-            return requestOrderDto ;
+            return orderDto ;
         }
 
     @PostMapping("/order")
-    @ResponseBody
-    public ResponseCreatNewOrderDto create (@PathVariable("id") long id, @PathVariable("menu_items") RequestMenu_itemsDto requestMenu_items){
+    public CreatNewOrderDto create (@RequestParam("restaurant_id") long restaurant_id, Menu_itemsDto menu_itemsDto){
 
-            ResponseCreatNewOrderDto responseCreatNewOrderDto = new ResponseCreatNewOrderDto();
+            CreatNewOrderDto creatNewOrderDto = new CreatNewOrderDto();
 
-        return responseCreatNewOrderDto ;
+        return creatNewOrderDto ;
     }
 
 }

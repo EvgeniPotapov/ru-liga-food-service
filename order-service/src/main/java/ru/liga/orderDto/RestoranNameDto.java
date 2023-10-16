@@ -1,11 +1,11 @@
-package ru.liga.dto;
+package ru.liga.orderDto;
 
 import lombok.Getter;
 import lombok.Setter;
 
 @Setter
 @Getter
-public class ResponseRestoranNameDto {
+public class RestoranNameDto {
 
     private String name;
 

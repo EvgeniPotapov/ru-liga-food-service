@@ -2,15 +2,30 @@ package ru.liga.deliveryController;
 
 
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.*;
+import ru.liga.dto.CustomerAddressDto;
+import ru.liga.dto.DeliveryDto;
+import ru.liga.dto.RestaurantAddressDto;
 
-@Controller
+@RestController
 public class DeliveryController {
 
-    @PutMapping("/orderItem/{status}")
-    public String updateStatus(@PathVariable("status") String status){
+    @GetMapping("/deliveries/{status}")
+    public DeliveryDto getAddress (@PathVariable ("status") String status){
 
-        return  "Статус заказа изменён";
+        DeliveryDto dto = new DeliveryDto();
+        dto.setRestaurant(new RestaurantAddressDto());
+        dto.setCustomer(new CustomerAddressDto());
+
+        return dto;
+    }
+
+    @PostMapping ("/delivery/{id}")
+    public String setStatus (@PathVariable ("id") long id, @RequestParam("order_action")
+    String order_action){
+
+
+
+        return "статус изменён";
     }
 }
