@@ -4,28 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6028eece-2948-4731-ab72-1937a8964a64" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/migration/src/main/resources/db/changelog/v1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/migration/src/main/resources/db/changelog/v1/rollback/v1-table-rollback.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/migration/src/main/resources/db/changelog/v1/v1-create-table.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/migration/src/main/resources/liquibase.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/migration/src/main/resources/master.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dependency_bom/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dependency_bom/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/migration/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/migration/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/migration/src/main/java/ru/liga/MigrationApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migration/src/main/resources/application.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migration/src/main/resources/db/changelog/main-changelog.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migration/src/main/resources/db/changelog/v1/v1-accumulate-changelog.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migration/src/main/resources/db/changelog/v1/v1-create-couriers-table.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migration/src/main/resources/db/changelog/v1/v1-create-customers-table.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migration/src/main/resources/db/changelog/v1/v1-create-menu-table.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migration/src/main/resources/db/changelog/v1/v1-create-order-table.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migration/src/main/resources/db/changelog/v1/v1-create-order_items-table.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migration/src/main/resources/db/changelog/v1/v1-create-restaurant-table-changelog.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/pom.xml" afterDir="false" />
-    </list>
+    <list default="true" id="6028eece-2948-4731-ab72-1937a8964a64" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
