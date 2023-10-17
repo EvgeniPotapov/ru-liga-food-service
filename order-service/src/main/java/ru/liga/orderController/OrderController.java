@@ -3,41 +3,44 @@ package ru.liga.orderController;
 
 import org.springframework.web.bind.annotation.*;
 import ru.liga.dto.Menu_itemsDto;
-import ru.liga.orderDto.ItemsDto;
-import ru.liga.orderDto.RestoranNameDto;
-import ru.liga.orderDto.CreatNewOrderDto;
-import ru.liga.orderDto.OrderDto;
+import ru.liga.orderDto.*;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @RestController
 public class OrderController {
 
-    @GetMapping("/order")
-    public OrderDto getOrder (){
+
+
+    @GetMapping("/orders")
+    public List<OrderDto> getOrder (){
+
+        List <OrderDto> orders= new ArrayList<>();
 
         OrderDto requestOrderDto = new OrderDto();
-       requestOrderDto.setItems(new ItemsDto());
-       requestOrderDto.setRestaurant(new RestoranNameDto());
+       requestOrderDto.setItems(new Menu_Items());
+       requestOrderDto.setRestaurant(new RestoranName());
+       orders.add(requestOrderDto);
 
-        return requestOrderDto ;
+        return orders ;
     }
-        @GetMapping("orders/{id}")
+        @GetMapping("/orders/{id}")
         public OrderDto getOrderById (@PathVariable("id") long id){
 
                OrderDto orderDto = new OrderDto();
-               orderDto.setId(1);
-               orderDto.setItems(new ItemsDto());
+               orderDto.setId(id);
+               orderDto.setItems(new Menu_Items());
                orderDto.setTimestamp(30);
-               orderDto.setRestaurant(new RestoranNameDto());
+               orderDto.setRestaurant(new RestoranName());
 
             return orderDto ;
         }
 
     @PostMapping("/order")
-    public CreatNewOrderDto create (@RequestParam("restaurant_id") long restaurant_id, Menu_itemsDto menu_itemsDto){
+    public CreatNewOrderDto create (@RequestBody Menu_restoran menu_restoran){
 
-            CreatNewOrderDto creatNewOrderDto = new CreatNewOrderDto();
-
-        return creatNewOrderDto ;
+        return new CreatNewOrderDto() ;
     }
 
 }

@@ -5,7 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6028eece-2948-4731-ab72-1937a8964a64" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/migration/src/main/resources/db/changelog/v1/rollback/v1-table-rollback.sql" beforeDir="false" afterPath="$PROJECT_DIR$/migration/src/main/resources/db/changelog/v1/rollback/v1-table-rollback.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/orderDto/Menu_restoran.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/orderDto/Quantity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dependency_bom/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dependency_bom/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/orderController/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/orderController/OrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/orderDto/ItemsDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/orderDto/Menu_Items.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/orderDto/OrderDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/orderDto/OrderDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/orderDto/RestoranNameDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/orderDto/RestoranName.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +114,7 @@
       <command value="mvn -Plocal liquibase:rollback -Dliquibase.rollbackCount=1" />
     </option>
   </component>
-  <component name="RunManager" selected="Application.MigrationApplication">
+  <component name="RunManager" selected="Application.OrderApplication">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ru.liga.App" />
       <module name="notification-service" />
@@ -182,10 +189,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.OrderApplication" />
         <item itemvalue="Application.MigrationApplication" />
         <item itemvalue="Application.DeliveryApplication" />
         <item itemvalue="Application.KitchenApplication" />
-        <item itemvalue="Application.OrderApplication" />
         <item itemvalue="Application.App" />
       </list>
     </recent_temporary>

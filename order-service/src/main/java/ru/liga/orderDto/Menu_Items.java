@@ -6,7 +6,7 @@ import lombok.Setter;
 import java.math.BigDecimal;
 @Getter
 @Setter
-public class ItemsDto {
+public class Menu_Items {
 
     private BigDecimal price;
     private String image;

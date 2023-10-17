@@ -9,10 +9,12 @@ public class OrderDto {
 
 
 
-    long id;
-    RestoranNameDto restaurant;
-    int timestamp;
-    ItemsDto items;
+    private long id;
+    private RestoranName restaurant;
+    private int timestamp;
+    private Menu_Items items;
+
+
 
 
 
