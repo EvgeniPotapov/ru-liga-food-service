@@ -21,6 +21,7 @@
         <maven.compiler.plugin>3.11.0</maven.compiler.plugin>
         <java.version>11</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <hibernate-version>5.1.3.Final</hibernate-version>
     </properties>
 
 
