@@ -25,7 +25,7 @@ public class OrderController {
 
         return orders ;
     }
-        @GetMapping("/orders/{id}")
+        @GetMapping("/order/{id}")
         public OrderDto getOrderById (@PathVariable("id") long id){
 
                OrderDto orderDto = new OrderDto();
@@ -38,7 +38,7 @@ public class OrderController {
         }
 
     @PostMapping("/order")
-    public CreatNewOrderDto create (@RequestBody Menu_restoran menu_restoran){
+    public CreatNewOrderDto create (@PathVariable("id") long id, Menu_restoran menu_restoran){
 
         return new CreatNewOrderDto() ;
     }
