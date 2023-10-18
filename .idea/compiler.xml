@@ -22,6 +22,15 @@
         <module name="notification-service" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="delivery-service" target="11" />
+      <module name="dependency_bom" target="11" />
+      <module name="kitchen-service" target="11" />
+      <module name="migration" target="11" />
+      <module name="notification-service" target="11" />
+      <module name="order-service" target="11" />
+      <module name="ru-liga-food-service" target="11" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
