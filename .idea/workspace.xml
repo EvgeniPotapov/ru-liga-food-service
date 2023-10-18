@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6028eece-2948-4731-ab72-1937a8964a64" name="Changes" comment="" />
+    <list default="true" id="6028eece-2948-4731-ab72-1937a8964a64" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/kitchen-service/src/main/java/ru/liga/entities/OrderItemsEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kitchen-service/src/main/java/ru/liga/entities/RestaurantEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kitchen-service/src/main/java/ru/liga/entities/RrestoranMenuItemsEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dependency_bom/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dependency_bom/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kitchen-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/kitchen-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migration/src/main/resources/db/changelog/v1/v1-create-table.sql" beforeDir="false" afterPath="$PROJECT_DIR$/migration/src/main/resources/db/changelog/v1/v1-create-table.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/orderDto/Menu_Items.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/orderDto/Menu_Items.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
