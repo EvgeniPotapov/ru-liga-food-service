@@ -1,4 +1,4 @@
-package ru.liga.orderDto;
+package ru.liga.model;
 
 public class Quantity {
 

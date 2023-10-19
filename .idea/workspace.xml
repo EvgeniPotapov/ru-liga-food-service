@@ -6,7 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="6028eece-2948-4731-ab72-1937a8964a64" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kitchen-service/src/main/java/ru/liga/kitchenController/KitchenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/kitchen-service/src/main/java/ru/liga/kitchenController/KitchenController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/orderController/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/orderController/OrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/orderDto/Menu_Items.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/model/Menu_Items.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/orderDto/Menu_restoran.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/orderDto/Menu_restoran.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/orderDto/OrderDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/orderDto/OrderDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/orderDto/Quantity.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/model/Quantity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/orderDto/RestoranName.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/model/RestoranName.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

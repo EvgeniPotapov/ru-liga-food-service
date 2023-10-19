@@ -3,9 +3,9 @@ package ru.liga.orderController;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import ru.liga.dto.Menu_itemsDto;
-import ru.liga.entities.CustomersEntity;
 import ru.liga.entities.OrdersEntity;
+import ru.liga.model.Menu_Items;
+import ru.liga.model.RestoranName;
 import ru.liga.orderDto.*;
 import ru.liga.repository.CustomersRepository;
 import ru.liga.repository.OrdersRepository;
