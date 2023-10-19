@@ -36,17 +36,17 @@ public class KitchenController {
         return orderItemDto ;
     }
 
-    @PostMapping("/orderes/{id}/{restaurantId}/{name}/{price}/{image}/{description}")
-    public void saveMenuRestaurant (@PathVariable long id,@PathVariable long restaurantId,@PathVariable String name,
-                                             @PathVariable double price,@PathVariable String image,@PathVariable String description,
-                                             RestauranMenuItemsEntity restauranMenuItemsEntity){
+
+
+    @PostMapping("/menu/save")
+    public void saveMenuRestaurant (@RequestBody RestauranMenuItemsEntity restauranMenuItemsEntity){
 
         restauranMenuItemsRepository.save(restauranMenuItemsEntity);
     }
 
-    @PostMapping("/orderes/{id}/{orderId}/{restaurantMenuItems}/{price}/{quantitu}")
-    public void saveOrderItems (@PathVariable long id, @PathVariable long orderId, @PathVariable long restaurantMenuItems,
-                                @PathVariable BigDecimal price, @PathVariable int quantitu, OrderItemsEntity orderItemsEntity){
+
+    @PostMapping("/orderes/save")
+    public void saveOrderItem (@RequestBody OrderItemsEntity orderItemsEntity){
 
         orderItemsRepository.save(orderItemsEntity);
     }
