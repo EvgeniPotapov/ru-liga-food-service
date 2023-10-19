@@ -1,17 +1,24 @@
 package ru.liga.orderController;
 
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import ru.liga.dto.Menu_itemsDto;
+import ru.liga.entities.CustomersEntity;
+import ru.liga.entities.OrdersEntity;
 import ru.liga.orderDto.*;
+import ru.liga.repository.CustomersRepository;
+import ru.liga.repository.OrdersRepository;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @RestController
 public class OrderController {
-
-
+    @Autowired
+    CustomersRepository customersRepository;
+    @Autowired
+    OrdersRepository ordersRepository;
 
     @GetMapping("/orders")
     public List<OrderDto> getOrder (){
@@ -41,6 +48,14 @@ public class OrderController {
     public CreatNewOrderDto create (@PathVariable("id") long id, Menu_restoran menu_restoran){
 
         return new CreatNewOrderDto() ;
+    }
+
+    @GetMapping("/or/{id}")
+    public OrdersEntity ById (@PathVariable("id") long id){
+
+      OrdersEntity customersEntity =  ordersRepository.findOrdersById(id);
+
+        return customersEntity ;
     }
 
 }
