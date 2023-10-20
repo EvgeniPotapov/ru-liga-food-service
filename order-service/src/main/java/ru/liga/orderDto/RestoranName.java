@@ -1,4 +1,4 @@
-package ru.liga.model;
+package ru.liga.orderDto;
 
 import lombok.Getter;
 import lombok.Setter;

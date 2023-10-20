@@ -6,24 +6,27 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.bind.annotation.PathVariable;
 import ru.liga.dto.Menu_itemsDto;
 import ru.liga.dto.OrderItemDto;
+import ru.liga.dto.RestauranMenuItemsDto;
 import ru.liga.entities.OrderItemsEntity;
 import ru.liga.entities.RestauranMenuItemsEntity;
 import ru.liga.entities.RestaurantEntity;
 import ru.liga.repository.OrderItemsRepository;
 import ru.liga.repository.RestauranMenuItemsRepository;
 import ru.liga.repository.RestauranRepository;
+import ru.liga.services.RestaurantItemServices;
 
 import java.math.BigDecimal;
 import java.sql.DataTruncation;
 
 @RestController
 public class KitchenController {
+//    @Autowired
+//    OrderItemsRepository orderItemsRepository;
+//    @Autowired
+//    RestauranRepository restauranRepository;
+
     @Autowired
-    OrderItemsRepository orderItemsRepository;
-    @Autowired
-    RestauranRepository restauranRepository;
-    @Autowired
-    RestauranMenuItemsRepository restauranMenuItemsRepository;
+    RestaurantItemServices restaurantItemServices;
 
 
     @GetMapping("/order/{status}")
@@ -36,19 +39,39 @@ public class KitchenController {
         return orderItemDto ;
     }
 
+//
+//    @PostMapping("/orderes/save")
+//    public void saveOrderItem (@RequestBody OrderItemsEntity orderItemsEntity){
+//
+//        orderItemsRepository.save(orderItemsEntity);
+//    }
 
+    //метод ля изменения поля цены
+    @PutMapping("menu/update/{id}/{price}")
+    public void updateMenuRestauran (@PathVariable long id,@PathVariable BigDecimal price){
 
+        restaurantItemServices.updatePriceMenu(id, price);
+    }
+    //Добавление нового меню
     @PostMapping("/menu/save")
-    public void saveMenuRestaurant (@RequestBody RestauranMenuItemsEntity restauranMenuItemsEntity){
+    public void saveMenuRestaurant (@RequestBody RestauranMenuItemsDto restauranMenuItemsDto){
 
-        restauranMenuItemsRepository.save(restauranMenuItemsEntity);
+        restaurantItemServices.saveRestauranMenu(restauranMenuItemsDto);
+    }
+    //Удаление меню по id
+    @DeleteMapping("/menu/delete/{id}")
+    public void deleteRestauranMenu (@PathVariable long id){
+
+        restaurantItemServices.deleteRestauranMenu(id);
     }
 
+    //получить меню по id
+    @GetMapping("/getmenu/{id}")
+    public RestauranMenuItemsDto saveOrderItem (@PathVariable long id){
 
-    @PostMapping("/orderes/save")
-    public void saveOrderItem (@RequestBody OrderItemsEntity orderItemsEntity){
+       return restaurantItemServices.getRestauranMenuId(id);
 
-        orderItemsRepository.save(orderItemsEntity);
+
     }
 
 }

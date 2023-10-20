@@ -29,7 +29,7 @@ public class RestauranMenuItemsEntity {
     @Column(name = "nameitems")
     private String name;
 
-    private double price;
+    private BigDecimal price;
 
     private String image;
 

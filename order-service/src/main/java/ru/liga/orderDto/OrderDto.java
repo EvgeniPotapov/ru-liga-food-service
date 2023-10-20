@@ -2,8 +2,6 @@ package ru.liga.orderDto;
 
 import lombok.Getter;
 import lombok.Setter;
-import ru.liga.model.Menu_Items;
-import ru.liga.model.RestoranName;
 
 @Getter
 @Setter

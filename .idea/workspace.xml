@@ -5,13 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6028eece-2948-4731-ab72-1937a8964a64" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/kitchen-service/src/main/java/ru/liga/mappers/RestaurantItemMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kitchen-service/src/main/java/ru/liga/services/RestaurantItemServices.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/mappers/CustomerMappers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/orderDto/CustomerDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/services/CustomerServices.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kitchen-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/kitchen-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kitchen-service/src/main/java/ru/liga/dto/RestauranMenuItemsDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/kitchen-service/src/main/java/ru/liga/dto/RestauranMenuItemsDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kitchen-service/src/main/java/ru/liga/entities/RestauranMenuItemsEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/kitchen-service/src/main/java/ru/liga/entities/RestauranMenuItemsEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kitchen-service/src/main/java/ru/liga/kitchenController/KitchenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/kitchen-service/src/main/java/ru/liga/kitchenController/KitchenController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kitchen-service/src/main/java/ru/liga/repository/RestauranMenuItemsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/kitchen-service/src/main/java/ru/liga/repository/RestauranMenuItemsRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/model/Menu_Items.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/orderDto/Menu_Items.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/model/Quantity.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/orderDto/Quantity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/model/RestoranName.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/orderDto/RestoranName.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/orderController/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/orderController/OrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/orderDto/Menu_Items.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/model/Menu_Items.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/orderDto/Menu_restoran.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/orderDto/Menu_restoran.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/orderDto/OrderDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/orderDto/OrderDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/orderDto/Quantity.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/model/Quantity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/orderDto/RestoranName.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/model/RestoranName.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/repository/CustomersRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/repository/CustomersRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +81,7 @@
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.testRunning&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;spring.configuration.checksum&quot;: &quot;04f0a2dad0cf8a2e5cae16f65c7d5455&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
@@ -191,8 +203,8 @@
       <list>
         <item itemvalue="Application.KitchenApplication" />
         <item itemvalue="Application.OrderApplication" />
-        <item itemvalue="Application.DeliveryApplication" />
         <item itemvalue="Application.MigrationApplication" />
+        <item itemvalue="Application.DeliveryApplication" />
         <item itemvalue="Application.App" />
       </list>
     </recent_temporary>
