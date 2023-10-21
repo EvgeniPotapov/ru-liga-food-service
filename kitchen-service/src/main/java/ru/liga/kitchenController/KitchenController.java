@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.bind.annotation.PathVariable;
+import ru.liga.dto.MenuItemsOrderDto;
 import ru.liga.dto.Menu_itemsDto;
 import ru.liga.dto.OrderItemDto;
 import ru.liga.dto.RestauranMenuItemsDto;
@@ -13,6 +14,7 @@ import ru.liga.entities.RestaurantEntity;
 import ru.liga.repository.OrderItemsRepository;
 import ru.liga.repository.RestauranMenuItemsRepository;
 import ru.liga.repository.RestauranRepository;
+import ru.liga.services.OrderItemServices;
 import ru.liga.services.RestaurantItemServices;
 
 import java.math.BigDecimal;
@@ -20,13 +22,11 @@ import java.sql.DataTruncation;
 
 @RestController
 public class KitchenController {
-//    @Autowired
-//    OrderItemsRepository orderItemsRepository;
-//    @Autowired
-//    RestauranRepository restauranRepository;
 
     @Autowired
     RestaurantItemServices restaurantItemServices;
+    @Autowired
+    OrderItemServices orderItemServices;
 
 
     @GetMapping("/order/{status}")
@@ -39,12 +39,18 @@ public class KitchenController {
         return orderItemDto ;
     }
 
-//
-//    @PostMapping("/orderes/save")
-//    public void saveOrderItem (@RequestBody OrderItemsEntity orderItemsEntity){
-//
-//        orderItemsRepository.save(orderItemsEntity);
-//    }
+    //Добавление заказа клиента
+    @PostMapping("/order/save")
+    public void saveOrderItem (@RequestBody MenuItemsOrderDto menuItemsOrderDto){
+
+        orderItemServices.saveOrderItem(menuItemsOrderDto);
+    }
+    //Получение заказа по Id
+    @GetMapping("/getOrderItem/{id}")
+    public MenuItemsOrderDto getOrderItem (@PathVariable long id){
+
+        return orderItemServices.getOrderItemMenu(id);
+    }
 
     //метод ля изменения поля цены
     @PutMapping("menu/update/{id}/{price}")
@@ -67,11 +73,12 @@ public class KitchenController {
 
     //получить меню по id
     @GetMapping("/getmenu/{id}")
-    public RestauranMenuItemsDto saveOrderItem (@PathVariable long id){
+    public RestauranMenuItemsDto getRestauranMenu (@PathVariable long id){
 
        return restaurantItemServices.getRestauranMenuId(id);
 
 
     }
+
 
 }
