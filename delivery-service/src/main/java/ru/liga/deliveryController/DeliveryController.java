@@ -6,14 +6,18 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import ru.liga.dto.CustomerAddressDto;
 import ru.liga.dto.DeliveryDto;
+import ru.liga.dto.MenuItemsOrderDto;
 import ru.liga.dto.RestaurantAddressDto;
 import ru.liga.entities.CouriersEntity;
+import ru.liga.feignServise.FeignDelivery;
 import ru.liga.repository.CouriersRepository;
 
 @RestController
 public class DeliveryController {
     @Autowired
     CouriersRepository couriersRepository;
+    @Autowired
+    FeignDelivery feignDelivery;
 
     @GetMapping("/deliveries/{status}")
     public DeliveryDto getAddress (@PathVariable ("status") String status){
@@ -39,5 +43,13 @@ public class DeliveryController {
 
       CouriersEntity couriersEntity =  couriersRepository.findCouriersById(id);
         return couriersEntity;
+    }
+
+    //Запрос на получение заказа клиента в модуль кухни
+    @GetMapping("/getOrderItem")
+
+    public MenuItemsOrderDto getOrder (){
+
+        return feignDelivery.getOrderItem(1);
     }
 }
