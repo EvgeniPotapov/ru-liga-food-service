@@ -1,33 +1,30 @@
 package ru.liga.kitchenController;
 
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.bind.annotation.PathVariable;
 import ru.liga.dto.MenuItemsOrderDto;
 import ru.liga.dto.Menu_itemsDto;
 import ru.liga.dto.OrderItemDto;
 import ru.liga.dto.RestauranMenuItemsDto;
-import ru.liga.entities.OrderItemsEntity;
-import ru.liga.entities.RestauranMenuItemsEntity;
-import ru.liga.entities.RestaurantEntity;
-import ru.liga.repository.OrderItemsRepository;
-import ru.liga.repository.RestauranMenuItemsRepository;
-import ru.liga.repository.RestauranRepository;
+import ru.liga.entities.CustomMessage;
 import ru.liga.services.OrderItemServices;
 import ru.liga.services.RestaurantItemServices;
 
 import java.math.BigDecimal;
-import java.sql.DataTruncation;
+import java.util.Date;
+import java.util.UUID;
 
 @RestController
 public class KitchenController {
 
     @Autowired
-    RestaurantItemServices restaurantItemServices;
+    private RestaurantItemServices restaurantItemServices;
     @Autowired
-    OrderItemServices orderItemServices;
-
+    private OrderItemServices orderItemServices;
+    @Autowired
+    private RabbitTemplate template;
 
     @GetMapping("/order/{status}")
     public OrderItemDto orerInfo(@PathVariable("status") String status){
@@ -76,8 +73,16 @@ public class KitchenController {
     public RestauranMenuItemsDto getRestauranMenu (@PathVariable long id){
 
        return restaurantItemServices.getRestauranMenuId(id);
+    }
 
+    //Отправление сообщения в очередь
+    @PostMapping("/message")
+    public String sendMessageToRabbit(@RequestBody CustomMessage customMessage) {
 
+        customMessage.setMassageId(UUID.randomUUID().toString());
+        customMessage.setMessageDate(new Date());
+        template.convertAndSend("javaexchange","javarutingkey",customMessage);
+        return "Message";
     }
 
 
