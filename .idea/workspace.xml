@@ -5,18 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6028eece-2948-4731-ab72-1937a8964a64" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/delivery-service/src/main/java/ru/liga/consumer/ConsumerDelivery.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/delivery-service/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kitchen-service/src/main/java/ru/liga/config/RabbitMqConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kitchen-service/src/main/java/ru/liga/entities/CustomMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kitchen-service/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/delivery-service/src/main/java/ru/liga/rabbit/CustomMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/delivery-service/src/main/java/ru/liga/rabbit/MessageListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kitchen-service/src/main/java/ru/liga/rabbit/RabbitController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kitchen-service/src/main/java/ru/liga/rabbit/RabbitMqConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/delivery-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/delivery-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/delivery-service/src/main/resources/application.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kitchen-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/kitchen-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kitchen-service/src/main/java/ru/liga/KitchenApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/kitchen-service/src/main/java/ru/liga/KitchenApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery-service/src/main/java/ru/liga/consumer/ConsumerDelivery.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery-service/src/main/java/ru/liga/deliveryController/DeliveryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/delivery-service/src/main/java/ru/liga/deliveryController/DeliveryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kitchen-service/src/main/java/ru/liga/config/RabbitMqConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/delivery-service/src/main/java/ru/liga/rabbit/RabbitMqConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kitchen-service/src/main/java/ru/liga/entities/CustomMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/kitchen-service/src/main/java/ru/liga/rabbit/CustomMessage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kitchen-service/src/main/java/ru/liga/kitchenController/KitchenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/kitchen-service/src/main/java/ru/liga/kitchenController/KitchenController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kitchen-service/src/main/resources/application.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kitchen-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/kitchen-service/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,6 +90,10 @@
       <recent name="D:\ru-liga-food-service\migration\src\main\resources\db\changelog" />
       <recent name="D:\ru-liga-food-service\migration\src\main\resources\db\local" />
       <recent name="D:\ru-liga-food-service\migration\src\main\resources\db" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ru.liga.config" />
+      <recent name="ru.liga.entities" />
     </key>
   </component>
   <component name="RunAnythingCache">

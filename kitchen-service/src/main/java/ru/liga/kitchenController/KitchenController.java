@@ -1,6 +1,5 @@
 package ru.liga.kitchenController;
 
-import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -8,13 +7,10 @@ import ru.liga.dto.MenuItemsOrderDto;
 import ru.liga.dto.Menu_itemsDto;
 import ru.liga.dto.OrderItemDto;
 import ru.liga.dto.RestauranMenuItemsDto;
-import ru.liga.entities.CustomMessage;
 import ru.liga.services.OrderItemServices;
 import ru.liga.services.RestaurantItemServices;
 
 import java.math.BigDecimal;
-import java.util.Date;
-import java.util.UUID;
 
 @RestController
 public class KitchenController {
@@ -23,8 +19,7 @@ public class KitchenController {
     private RestaurantItemServices restaurantItemServices;
     @Autowired
     private OrderItemServices orderItemServices;
-    @Autowired
-    private RabbitTemplate template;
+
 
     @GetMapping("/order/{status}")
     public OrderItemDto orerInfo(@PathVariable("status") String status){
@@ -75,15 +70,7 @@ public class KitchenController {
        return restaurantItemServices.getRestauranMenuId(id);
     }
 
-    //Отправление сообщения в очередь
-    @PostMapping("/message")
-    public String sendMessageToRabbit(@RequestBody CustomMessage customMessage) {
 
-        customMessage.setMassageId(UUID.randomUUID().toString());
-        customMessage.setMessageDate(new Date());
-        template.convertAndSend("javaexchange","javarutingkey",customMessage);
-        return "Message";
-    }
 
 
 }

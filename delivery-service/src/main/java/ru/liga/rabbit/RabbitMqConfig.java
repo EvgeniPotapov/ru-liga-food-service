@@ -1,4 +1,4 @@
-package ru.liga.config;
+package ru.liga.rabbit;
 
 
 import org.springframework.amqp.core.*;
@@ -11,19 +11,23 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class RabbitMqConfig {
+
+    public static final String QUEUE="javaqueue";
+    public static final String EXCHANGE="javaexchange";
+    public static final String ROUTINGKEY="javarutingkey";
     @Bean
     public Queue queue(){
 
-        return new Queue("javaqueue");
+        return new Queue(QUEUE);
     }
     @Bean
     public TopicExchange exchange (){
 
-        return new TopicExchange("javaexchange");
+        return new TopicExchange(EXCHANGE);
     }
     @Bean
     public Binding binding(Queue queue, TopicExchange topicExchange){
-        return BindingBuilder.bind(queue).to(topicExchange).with("javarutingkey");
+        return BindingBuilder.bind(queue).to(topicExchange).with(ROUTINGKEY);
     }
     @Bean
     public MessageConverter messageConverter(){

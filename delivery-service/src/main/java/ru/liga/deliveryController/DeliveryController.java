@@ -45,11 +45,10 @@ public class DeliveryController {
         return couriersEntity;
     }
 
-    //Запрос на получение заказа клиента в модуль кухни
-    @GetMapping("/getOrderItem")
+    //Запрос на получение заказа клиента по id в модуль кухни
+    @GetMapping("/getOrderItem/{id}")
+    public MenuItemsOrderDto getOrder (@PathVariable long id){
 
-    public MenuItemsOrderDto getOrder (){
-
-        return feignDelivery.getOrderItem(1);
+        return feignDelivery.getOrderItem(id);
     }
 }
