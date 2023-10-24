@@ -9,6 +9,6 @@ import ru.liga.dto.MenuItemsOrderDto;
 public interface FeignDelivery {
 
     //Делаем запрос в сервис кухни на получение заказа клиента
-    @GetMapping("/getOrderItem/{id}")
+    @GetMapping("/orderItem/{id}")
     MenuItemsOrderDto getOrderItem (@PathVariable long id);
 }

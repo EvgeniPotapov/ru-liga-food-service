@@ -7,16 +7,17 @@ import ru.liga.dto.*;
 import ru.liga.entities.CouriersEntity;
 import ru.liga.feignServise.FeignDelivery;
 import ru.liga.repository.CouriersRepository;
+import ru.liga.services.CouriersServices;
 
 @RestController
 public class DeliveryController {
     @Autowired
-    CouriersRepository couriersRepository;
+    CouriersServices couriersServices;
     @Autowired
     FeignDelivery feignDelivery;
 
     //Получение информации о расстоянии до ресторана и клиента
-    @GetMapping("/deliveries/{status}")
+    @GetMapping("/deliveriesInfo/{status}")
     public InformationToCouriersDto getAddress (@PathVariable ("status") String status){
 
         InformationToCouriersDto informationToCouriersDto = new InformationToCouriersDto();
@@ -32,18 +33,27 @@ public class DeliveryController {
 
     }
 
-    //Получение информации о курьере по Id
-    @GetMapping("/couriers/{id}")
-    public CouriersEntity getCour (@PathVariable ("id") long id){
-
-      CouriersEntity couriersEntity =  couriersRepository.findCouriersById(id);
-        return couriersEntity;
-    }
-
     //Запрос на получение заказа клиента по id в модуль кухни
-    @GetMapping("/getOrderItem/{id}")
+    @GetMapping("/orderItem/{id}")
     public MenuItemsOrderDto getOrder (@PathVariable long id){
 
         return feignDelivery.getOrderItem(id);
+    }
+
+    /////////////////////////////////////////
+    /////////////Couriers///////////////////
+
+    //Получение информации о курьере по Id
+    @GetMapping("/couriers/{id}")
+    public CouriersDto couriersId (@PathVariable long id){
+
+        return couriersServices.getCouriersId(id);
+    }
+
+    //Получение курьера по телефону
+    @GetMapping("/couriers/phone/{phone}")
+    public CouriersDto couriersPhone (@PathVariable String phone){
+
+        return couriersServices.getCouriersPhone(phone);
     }
 }

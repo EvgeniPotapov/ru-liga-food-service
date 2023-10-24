@@ -7,7 +7,7 @@ import ru.liga.entities.OrderItemsEntity;
 import ru.liga.mappers.OrderItemMapper;
 import ru.liga.repository.OrderItemsRepository;
 
-import java.awt.*;
+import java.math.BigDecimal;
 
 @Service
 public class OrderItemServices {
@@ -24,11 +24,26 @@ public class OrderItemServices {
         orderItemsRepository.save(orderItemsEntity);
     }
 
-    //нвходит заказ клиентов по Id
-    public MenuItemsOrderDto getOrderItemMenu (long id){
+    //находит заказ клиентов по Id
+    public MenuItemsOrderDto getOrderItemMenuId (long id){
 
         MenuItemsOrderDto menuItemsOrderDto = orderItemMapper.entityToDto(orderItemsRepository.findOrderItemsById(id));
 
         return menuItemsOrderDto;
     }
+    //находит заказ клиента по цене
+    public MenuItemsOrderDto getOrderItemMenuPrice (BigDecimal price){
+
+        MenuItemsOrderDto menuItemsOrderDto = orderItemMapper.entityToDto(orderItemsRepository.findOrderItemsByPrice(price));
+        return menuItemsOrderDto;
+    }
+    //удаление заказа клиента
+    public void deleteOrderItem (long id){
+
+        orderItemsRepository.deleteOrderItemsById(id);
+    }
+
+
+
+
 }

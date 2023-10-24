@@ -21,6 +21,15 @@ public class CustomerServices  {
 
     }
 
+    public CustomerDto getCustomerPhone (String phone){
+
+        CustomersEntity customersEntity = customersRepository.findCustomerByPhone(phone);
+        CustomerDto customerDto = customerMappers.entityToDto(customersEntity);
+
+        return customerDto;
+
+    }
+
 
 
 
