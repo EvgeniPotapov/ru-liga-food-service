@@ -17,6 +17,7 @@ public class RestaurantItemServices {
     @Autowired
     RestauranMenuItemsRepository restauranMenuItemsRepository;
 
+    //получение меню ресторана по id
     public RestauranMenuItemsDto getRestauranMenuId (long id){
         RestauranMenuItemsEntity restauranMenuItemsEntity = restauranMenuItemsRepository.findRestauranMenuItemsById(id);
 
@@ -24,17 +25,21 @@ public class RestaurantItemServices {
         return restauranMenuItemsDto;
 
     }
+
+    //сохранение меню ресторана
     public void saveRestauranMenu (RestauranMenuItemsDto restauranMenuItemsDto){
         RestauranMenuItemsEntity restauranMenuItemsEntity = restaurantItemMapper.dtoToEntity(restauranMenuItemsDto);
 
         restauranMenuItemsRepository.save(restauranMenuItemsEntity);
     }
 
+
+    //удаление меню ресторана
     public void deleteRestauranMenu (long id){
 
         restauranMenuItemsRepository.deleteById(id);
     }
-
+    //изменение цены в меню
     public void updatePriceMenu (long id, BigDecimal price){
 
         restauranMenuItemsRepository.updatePriceMenu(id, price);

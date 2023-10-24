@@ -5,7 +5,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class CustomerAddressDto {
+public class RestaurantAddress {
 
     private String address;
     private String distance;

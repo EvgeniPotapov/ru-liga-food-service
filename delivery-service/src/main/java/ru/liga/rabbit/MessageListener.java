@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 @Component
 public class MessageListener {
 
+    //Принимаем сообщение из сервиса кухни
     @RabbitListener(queues = RabbitMqConfig.QUEUE)
     public void listener( CustomMessage message){
 

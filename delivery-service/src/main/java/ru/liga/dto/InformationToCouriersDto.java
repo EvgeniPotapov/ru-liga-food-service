@@ -5,13 +5,13 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class DeliveryDto {
+public class InformationToCouriersDto {
 
     private long orderId;
 
-    private RestaurantAddressDto restaurant;
+    private RestaurantAddress restaurant;
 
-    private CustomerAddressDto customer;
+    private CustomerAddress customer;
 
     private String payment;
 }

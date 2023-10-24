@@ -3,8 +3,8 @@ package ru.liga.mappers;
 import org.mapstruct.Mapper;
 import ru.liga.dto.MenuItemsOrderDto;
 import ru.liga.entities.OrderItemsEntity;
-import ru.liga.entities.RestauranMenuItemsEntity;
 
+//интерфейс для преобразования сущностеи из базы данных в формы представления и наоборот(заказ клиента)
 @Mapper(componentModel = "spring")
 public interface OrderItemMapper {
 

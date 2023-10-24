@@ -7,10 +7,12 @@ import java.math.BigDecimal;
 @Getter
 @Setter
 
-public class Menu_Items {
+public class MenuItems {
 
     private BigDecimal price;
-    private String image;
-    private String description;
     private int quantity;
+    private String description;
+    private String image;
+
+
 }

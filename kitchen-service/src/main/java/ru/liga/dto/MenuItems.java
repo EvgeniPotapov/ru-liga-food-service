@@ -5,7 +5,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class Menu_itemsDto {
+public class MenuItems {
 
     private int quantity;
     private long meny_item_id;

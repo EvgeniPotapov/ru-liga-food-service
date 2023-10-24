@@ -7,5 +7,5 @@ import lombok.Setter;
 @Setter
 public class OrderItemDto {
     private long id;
-    Menu_itemsDto menu_items;
+    MenuItems menuItems;
 }

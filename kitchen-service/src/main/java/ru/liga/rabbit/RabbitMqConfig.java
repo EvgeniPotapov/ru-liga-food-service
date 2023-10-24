@@ -15,20 +15,27 @@ public class RabbitMqConfig {
     public static final String QUEUE="javaqueue";
     public static final String EXCHANGE="javaexchange";
     public static final String ROUTINGKEY="javarutingkey";
+    //Создание очереди
     @Bean
     public Queue queue(){
 
         return new Queue(QUEUE);
     }
+
+    //Создание обменника
     @Bean
     public TopicExchange exchange (){
 
         return new TopicExchange(EXCHANGE);
     }
+
+    //Сщединение очереди и обменника
     @Bean
     public Binding binding(Queue queue, TopicExchange topicExchange){
         return BindingBuilder.bind(queue).to(topicExchange).with(ROUTINGKEY);
     }
+
+    //конвертер сообщений
     @Bean
     public MessageConverter messageConverter(){
         return new Jackson2JsonMessageConverter();

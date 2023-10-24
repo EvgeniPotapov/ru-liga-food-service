@@ -8,6 +8,7 @@ import ru.liga.entities.RestauranMenuItemsEntity;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
+//Выполнение запросов к базе данных (заказ клиента)
 public interface OrderItemsRepository extends CrudRepository<OrderItemsEntity,Long> {
 
     OrderItemsEntity findOrderItemsById(long id);

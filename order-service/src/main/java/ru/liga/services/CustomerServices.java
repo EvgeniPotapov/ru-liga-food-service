@@ -3,7 +3,6 @@ package ru.liga.services;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import ru.liga.entities.CustomersEntity;
-
 import ru.liga.mappers.CustomerMappers;
 import ru.liga.orderDto.CustomerDto;
 import ru.liga.repository.CustomersRepository;
@@ -14,9 +13,10 @@ public class CustomerServices  {
     @Autowired
     CustomerMappers customerMappers;
     public CustomerDto getCustomerId (long id){
-        CustomersEntity customersEntity = customersRepository.findCustomersById(id);
 
-        CustomerDto customerDto = customerMappers.entityTODto(customersEntity);
+        CustomersEntity customersEntity = customersRepository.findCustomersById(id);
+        CustomerDto customerDto = customerMappers.entityToDto(customersEntity);
+
         return customerDto;
 
     }

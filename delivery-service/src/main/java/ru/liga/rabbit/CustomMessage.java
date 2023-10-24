@@ -11,6 +11,7 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
+//класс объект сообщения принимаемого из кухонного сервиса
 public class CustomMessage {
     private long orderId;
     private String message;

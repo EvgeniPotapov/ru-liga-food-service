@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.bind.annotation.PathVariable;
 import ru.liga.dto.MenuItemsOrderDto;
-import ru.liga.dto.Menu_itemsDto;
+import ru.liga.dto.MenuItems;
 import ru.liga.dto.OrderItemDto;
 import ru.liga.dto.RestauranMenuItemsDto;
 import ru.liga.services.OrderItemServices;
@@ -20,12 +20,12 @@ public class KitchenController {
     @Autowired
     private OrderItemServices orderItemServices;
 
-
-    @GetMapping("/order/{status}")
-    public OrderItemDto orerInfo(@PathVariable("status") String status){
+    //Получение заказа по статусу
+    @GetMapping("/ordersInf")
+    public OrderItemDto orderInfo(@RequestBody String status){
 
        OrderItemDto orderItemDto = new OrderItemDto();
-       orderItemDto.setMenu_items(new Menu_itemsDto());
+       orderItemDto.setMenuItems(new MenuItems());
 
 
         return orderItemDto ;

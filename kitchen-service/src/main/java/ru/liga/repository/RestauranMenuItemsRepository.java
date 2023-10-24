@@ -10,6 +10,7 @@ import ru.liga.entities.RestauranMenuItemsEntity;
 import javax.transaction.Transactional;
 import java.math.BigDecimal;
 
+//Выполнение запросов к базе данных (меню ресторана)
 @Repository
 public interface RestauranMenuItemsRepository extends CrudRepository<RestauranMenuItemsEntity, Long > {
 

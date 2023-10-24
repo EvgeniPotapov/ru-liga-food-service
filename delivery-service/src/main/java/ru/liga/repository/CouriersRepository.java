@@ -13,8 +13,7 @@ import ru.liga.entities.CouriersEntity;
 @Repository
 public interface CouriersRepository extends CrudRepository<CouriersEntity,Long> {
 
-
-
+    //Запросы на получение данных из базы данных
     CouriersEntity findCouriersById(long id);
 
     CouriersEntity findCouriersByPhone(String phone);

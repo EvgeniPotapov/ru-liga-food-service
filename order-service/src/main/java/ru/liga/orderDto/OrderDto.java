@@ -7,12 +7,10 @@ import lombok.Setter;
 @Setter
 public class OrderDto {
 
-
-
     private long id;
     private RestoranName restaurant;
     private int timestamp;
-    private Menu_Items items;
+    private MenuItems items;
 
 
 

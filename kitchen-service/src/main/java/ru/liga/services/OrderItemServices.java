@@ -16,12 +16,15 @@ public class OrderItemServices {
     @Autowired
     OrderItemMapper orderItemMapper;
 
+
+    //Метод сохраняет заказ клиента
     public void saveOrderItem (MenuItemsOrderDto menuItemsOrder){
 
        OrderItemsEntity orderItemsEntity = orderItemMapper.dtoToEntity(menuItemsOrder);
         orderItemsRepository.save(orderItemsEntity);
     }
 
+    //нвходит заказ клиентов по Id
     public MenuItemsOrderDto getOrderItemMenu (long id){
 
         MenuItemsOrderDto menuItemsOrderDto = orderItemMapper.entityToDto(orderItemsRepository.findOrderItemsById(id));

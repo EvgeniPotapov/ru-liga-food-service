@@ -8,6 +8,7 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
+//Сообщение передаваемое в модуль доставки
 public class CustomMessage {
 
     private long orderId;
