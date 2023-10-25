@@ -4,9 +4,8 @@ package ru.liga.deliveryController;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import ru.liga.dto.*;
-import ru.liga.entities.CouriersEntity;
 import ru.liga.feignServise.FeignDelivery;
-import ru.liga.repository.CouriersRepository;
+import ru.liga.myBatis.CouriersMapper;
 import ru.liga.services.CouriersServices;
 
 @RestController
@@ -15,6 +14,11 @@ public class DeliveryController {
     CouriersServices couriersServices;
     @Autowired
     FeignDelivery feignDelivery;
+    @Autowired
+    CouriersMapper couriersMapper;
+
+
+
 
     //Получение информации о расстоянии до ресторана и клиента
     @GetMapping("/deliveriesInfo/{status}")
@@ -55,5 +59,22 @@ public class DeliveryController {
     public CouriersDto couriersPhone (@PathVariable String phone){
 
         return couriersServices.getCouriersPhone(phone);
+    }
+
+    ///////////////////////////////////////////////////
+    ////////////////////MyBatis///////////////////////
+
+    //Поиск курьера по id
+    @GetMapping("/myBatisId/{id}")
+    public CouriersDto couriersMeBatisId (@PathVariable long id){
+
+        return couriersMapper.getCouriersById(id);
+    }
+
+    //Поиск курьера по статусу
+    @GetMapping("/myBatis/{status}")
+    public CouriersDto couriersMeBatisStatus (@PathVariable String status){
+
+        return couriersMapper.getCouriersByStatus(status);
     }
 }
