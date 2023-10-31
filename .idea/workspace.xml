@@ -5,37 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6028eece-2948-4731-ab72-1937a8964a64" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.github/workflows/maven.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/delivery-service/src/main/java/ru/liga/entities/OrdersEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/security/ResourceServerConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/security-service/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/security-service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/security-service/src/main/java/ru/liga/AuthServiceApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/security-service/src/main/java/ru/liga/configs/AuthorizationServerConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/security-service/src/main/java/ru/liga/configs/DefaultSecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/security-service/src/main/java/ru/liga/configs/JwtRequestFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/security-service/src/main/java/ru/liga/configs/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/security-service/src/main/java/ru/liga/dto/JwtRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/security-service/src/main/java/ru/liga/dto/JwtResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/security-service/src/main/java/ru/liga/dto/RegistrationUserDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/security-service/src/main/java/ru/liga/entity/Role.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/security-service/src/main/java/ru/liga/entity/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/security-service/src/main/java/ru/liga/exceptions/AppError.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/security-service/src/main/java/ru/liga/repositories/RoleRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/security-service/src/main/java/ru/liga/repositories/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/security-service/src/main/java/ru/liga/rest/AuthController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/security-service/src/main/java/ru/liga/rest/AuthenticationController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/security-service/src/main/java/ru/liga/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/security-service/src/main/java/ru/liga/utils/JwtTokenUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/security-service/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/security-service/src/test/java/ru/liga/AuthServiceApplicationTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/delivery-service/src/main/java/ru/liga/entities/CouriersEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/delivery-service/src/main/java/ru/liga/entities/CouriersEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/delivery-service/src/main/java/ru/liga/repository/CouriersRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/delivery-service/src/main/java/ru/liga/repository/CouriersRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/delivery-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dependency_bom/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dependency_bom/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kitchen-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/kitchen-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migration/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/migration/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/order-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/orderController/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/orderController/OrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/security-service/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,7 +98,6 @@
   </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
-      <command value="mvn install" />
       <command value="mvn liqubase" />
       <command value="mvn liqubase:dedlock" />
       <command value="mvn liquibase:help" />
@@ -142,25 +119,23 @@
       <command value="mvn -Plocal liquibase:rollback -Dliquibase.rollbackCount=1 -url=jdbc:postgresql://localhost:5433/postgres" />
       <command value="mvn -Plocal liquibase:update" />
       <command value="mvn -Plocal liquibase:rollback -Dliquibase.rollbackCount=1" />
+      <command value="mvn -B packege --file " />
+      <command value="mvn install" />
+      <command value="mvn -B packege --file pom.xml" />
+      <command value="mvn -B package --file pom.xml" />
     </option>
   </component>
-  <component name="RunManager" selected="Application.AuthServiceApplication">
-    <configuration name="AuthServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ru.liga.AuthServiceApplication" />
-      <module name="security-service" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.liga.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+  <component name="RunManager" selected="Application.App">
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="App" />
+      <module name="migration" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DeliveryApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ru.liga.DeliveryApplication" />
-      <module name="delivery-service" />
+    <configuration name="AuthServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ru.liga.AuthServiceApplication" />
+      <module name="security-service" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="ru.liga.*" />
@@ -214,11 +189,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.App" />
         <item itemvalue="Application.AuthServiceApplication" />
         <item itemvalue="Application.OrderApplication" />
         <item itemvalue="Application.KitchenApplication" />
         <item itemvalue="JUnit.All in security-service" />
-        <item itemvalue="Application.DeliveryApplication" />
       </list>
     </recent_temporary>
   </component>

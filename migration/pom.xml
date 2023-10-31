@@ -1,6 +1,6 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
+
 
     <parent>
         <artifactId>dependency_bom</artifactId>
@@ -9,9 +9,11 @@
         <relativePath>../dependency_bom/pom.xml</relativePath>
     </parent>
 
+    <modelVersion>4.0.0</modelVersion>
     <artifactId>migration</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
     <name>migration</name>
+    <url>http://maven.apache.org</url>
+    <packaging>jar</packaging>
 
 
     <dependencies>
@@ -44,17 +46,6 @@
         </plugins>
     </build>
 
-    <profiles>
-        <profile>
-            <id>local</id>
-            <activation>
-                <property>
-                    <name>env</name>
-                    <value>local</value>
-                </property>
-            </activation>
-        </profile>
-    </profiles>
 
 </project>
 
