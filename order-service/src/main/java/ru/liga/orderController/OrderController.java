@@ -19,6 +19,11 @@ public class OrderController {
     @Autowired
     OrderServices orderServices;
 
+    @GetMapping("/articles")
+    public String[] getArticles() {
+        return new String[] { "Article 1", "Article 2", "Article 3" };
+    }
+
     //получение списка всех заказов
     @GetMapping("/ordersMenu")
     public List<OrderMenuDto> getOrder (){

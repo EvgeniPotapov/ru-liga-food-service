@@ -29,7 +29,8 @@
 		<module>order-service</module>
 		<module>migration</module>
 		<module>delivery-service</module>
-	</modules>
+        <module>security-service</module>
+    </modules>
 
 
 

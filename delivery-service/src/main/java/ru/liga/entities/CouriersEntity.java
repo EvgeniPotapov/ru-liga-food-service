@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 @Table(name = "couriers")
@@ -25,4 +26,8 @@ public class CouriersEntity {
     private String status;
 
     private String coordinates;
+
+    @Basic(fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "couriers")
+    private Set<OrdersEntity> orders;
 }
