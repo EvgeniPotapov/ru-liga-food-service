@@ -1,27 +1,23 @@
 package ru.liga.rest;
 
 import lombok.AllArgsConstructor;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
-import java.security.Principal;
+import ru.liga.dto.RegDto;
+import ru.liga.service.UserService;
+
 
 @RestController
 @AllArgsConstructor
 public class AuthenticationController {
 
-    @GetMapping("/unsecured")
-    public String unsecuredData(){
-        return "UnSecured data";
-    }
+    private final UserService userService;
 
-    @GetMapping("/secured")
-    public String securedData(){
-        return "Secured data";
-    }
-
-    @GetMapping("info")
-    public String userData(Principal principal){
-        return principal.getName();
+    @PostMapping("/register")
+    public ResponseEntity<String> createUser(@RequestBody RegDto request) {
+        return userService.createUser(request);
     }
 
 }

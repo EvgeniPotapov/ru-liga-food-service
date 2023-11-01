@@ -7,7 +7,7 @@ import junit.framework.TestSuite;
 /**
  * Unit test for simple App.
  */
-public class AuthServiceApplicationTest
+public class CloudGatewayApplicationTest
     extends TestCase
 {
     /**
@@ -15,7 +15,7 @@ public class AuthServiceApplicationTest
      *
      * @param testName name of the test case
      */
-    public AuthServiceApplicationTest(String testName )
+    public CloudGatewayApplicationTest(String testName )
     {
         super( testName );
     }
@@ -25,7 +25,7 @@ public class AuthServiceApplicationTest
      */
     public static Test suite()
     {
-        return new TestSuite( AuthServiceApplicationTest.class );
+        return new TestSuite( CloudGatewayApplicationTest.class );
     }
 
     /**

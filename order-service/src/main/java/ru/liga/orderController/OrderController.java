@@ -19,7 +19,7 @@ public class OrderController {
     @Autowired
     OrderServices orderServices;
 
-    @GetMapping("/articles")
+    @GetMapping("/message")
     public String[] getArticles() {
         return new String[] { "Article 1", "Article 2", "Article 3" };
     }

@@ -5,15 +5,45 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6028eece-2948-4731-ab72-1937a8964a64" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/cloud-gateway/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-gateway/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-gateway/src/main/java/ru/liga/CloudGatewayApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-gateway/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/security/config/OAuth2ResourceServerSecurityConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/security-service/src/main/java/ru/liga/config/OAuth2AuthServerSecurityConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/security-service/src/main/java/ru/liga/config/UserAuthenticationConverter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/security-service/src/main/java/ru/liga/config/UserAuthenticationProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/security-service/src/main/java/ru/liga/dto/RegDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/security-service/src/main/java/ru/liga/dto/UserDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/security-service/src/main/java/ru/liga/model/CustomUserDetails.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/security-service/src/main/resources/schema.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/security-service/src/test/java/ru/liga/AppTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/delivery-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/delivery-service/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dependency_bom/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dependency_bom/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kitchen-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/kitchen-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/migration/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/migration/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/orderController/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/orderController/OrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/security/ResourceServerConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/security-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/security-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-service/src/main/java/ru/liga/AuthServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/security-service/src/main/java/ru/liga/AuthServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-service/src/main/java/ru/liga/configs/AuthorizationServerConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-service/src/main/java/ru/liga/configs/DefaultSecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-service/src/main/java/ru/liga/configs/JwtRequestFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-service/src/main/java/ru/liga/configs/SecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-service/src/main/java/ru/liga/dto/JwtRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-service/src/main/java/ru/liga/dto/JwtResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-service/src/main/java/ru/liga/dto/RegistrationUserDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-service/src/main/java/ru/liga/entity/Role.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-service/src/main/java/ru/liga/entity/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-service/src/main/java/ru/liga/exceptions/AppError.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-service/src/main/java/ru/liga/repositories/RoleRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-service/src/main/java/ru/liga/repositories/UserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-service/src/main/java/ru/liga/rest/AuthController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-service/src/main/java/ru/liga/rest/AuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/security-service/src/main/java/ru/liga/rest/AuthenticationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-service/src/main/java/ru/liga/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/security-service/src/main/java/ru/liga/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-service/src/main/java/ru/liga/utils/JwtTokenUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/security-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-service/src/test/java/ru/liga/AuthServiceApplicationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-gateway/src/test/java/ru/liga/CloudGatewayApplicationTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +93,7 @@
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "corretto-11",
     "last_directory_selection": "D:/ru-liga-food-service/food-service/dependency_bom/src/main/java/ru/liga",
-    "last_opened_file_path": "D:/ru-liga-food-service",
+    "last_opened_file_path": "D:/cloud-gateway-master",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -125,7 +155,7 @@
       <command value="mvn -B package --file pom.xml" />
     </option>
   </component>
-  <component name="RunManager" selected="Application.App">
+  <component name="RunManager" selected="Application.CloudGatewayApplication">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="App" />
       <module name="migration" />
@@ -136,6 +166,19 @@
     <configuration name="AuthServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ru.liga.AuthServiceApplication" />
       <module name="security-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.liga.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CloudGatewayApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ru.liga.CloudGatewayApplication" />
+      <module name="cloud-gateway" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="ru.liga.*" />
@@ -172,14 +215,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="All in security-service" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="security-service" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Main" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="order-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="Main" />
@@ -189,11 +224,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.App" />
+        <item itemvalue="Application.CloudGatewayApplication" />
         <item itemvalue="Application.AuthServiceApplication" />
         <item itemvalue="Application.OrderApplication" />
+        <item itemvalue="Application.App" />
         <item itemvalue="Application.KitchenApplication" />
-        <item itemvalue="JUnit.All in security-service" />
       </list>
     </recent_temporary>
   </component>

@@ -1,19 +1,16 @@
 server:
   port: 9000
 
-jwt:
-  secret: 986fgmvd56788ht5tgt54r
-  lifetime: 5m
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5433/postgres
+    url: jdbc:postgresql://localhost:5433/postgres?currentSchema=auth
     username: postgres
     password: postgres
-
     jpa:
       database-platform: org.hibernate.dialect.PostgreSQLDialect
       show-sql: false
-
+      hibernate:
+        ddl-auto: create
   jackson:
     deserialization:
       FAIL_ON_IGNORED_PROPERTIES: false
@@ -21,3 +18,6 @@ spring:
       INDENT_OUTPUT: false
       WRITE_DATES_AS_TIMESTAMPS: false
       WRITE_BIGDECIMAL_AS_PLAIN: true
+  sql:
+    init:
+      mode: always

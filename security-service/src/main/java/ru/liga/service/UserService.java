@@ -1,45 +1,49 @@
 package ru.liga.service;
 
-import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.provisioning.JdbcUserDetailsManager;
 import org.springframework.stereotype.Service;
-import ru.liga.entity.User;
-import ru.liga.repositories.RoleRepository;
-import ru.liga.repositories.UserRepository;
+import ru.liga.dto.RegDto;
+import ru.liga.model.CustomUserDetails;
 
-import javax.transaction.Transactional;
-import java.util.List;
-import java.util.Optional;
-import java.util.stream.Collectors;
+import java.util.Collections;
 
 @Service
-@RequiredArgsConstructor
-public class UserService implements UserDetailsService {
+public class UserService {
 
-   private final UserRepository userRepository;
-   private final RoleRepository roleRepository;
+    private final UserDetailsService userDetailsService;
 
-   public Optional<User> findByUsername(String userName){
-       return userRepository.findByUserName(userName); 
-   }
+    @Qualifier("defaultPasswordEncoder")
+    private final PasswordEncoder defaultPasswordEncoder;
 
-    @Override
-    @Transactional
-    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-
-       User user = findByUsername(username).orElseThrow(()-> new UsernameNotFoundException(String.format("Пользователь '%s' не найден ",username)));
-        return new org.springframework.security.core.userdetails.User(
-                user.getUserName(),
-                user.getPassword(),
-                user.getRoles().stream().map(role->new SimpleGrantedAuthority(role.getName())).collect(Collectors.toList())
-        );
+    public UserService(UserDetailsService userDetailsService, PasswordEncoder defaultPasswordEncoder) {
+        this.userDetailsService = userDetailsService;
+        this.defaultPasswordEncoder = defaultPasswordEncoder;
     }
 
-    public void createNewUser(User user){
-       user.setRoles(List.of(roleRepository.findByName("ROLE_USER").get()));
-       userRepository.save(user);
+    public ResponseEntity<String> createUser(RegDto request) {
+
+        CustomUserDetails customUserDetails = new CustomUserDetails(
+                request.getUsername(), defaultPasswordEncoder.encode(request.getPassword()),
+                Collections.singletonList(new SimpleGrantedAuthority("ROLE_USER"))
+        );
+
+        try {
+            if (userDetailsService.loadUserByUsername(request.getUsername()) != null) {
+                return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Пользователь с таким именем уже существует");
+            }
+
+        } catch (UsernameNotFoundException e) {
+            ((JdbcUserDetailsManager) userDetailsService).createUser(customUserDetails);
+            return ResponseEntity.ok("Пользователь успешно создан");
+        }
+        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Ошибка при создании пользователя");
+
     }
 }
