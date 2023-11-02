@@ -1,13 +1,18 @@
 package ru.liga.deliveryController;
 
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.Parameter;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import ru.liga.dto.*;
 import ru.liga.feignServise.FeignDelivery;
 import ru.liga.myBatis.CouriersMapper;
 import ru.liga.services.CouriersServices;
-
+@Tag(name = "API для взаимодействия с delivery-service")
 @RestController
 public class DeliveryController {
     @Autowired
@@ -48,13 +53,17 @@ public class DeliveryController {
     /////////////Couriers///////////////////
 
     //Получение информации о курьере по Id
+    @Operation(summary = "поиск курьера по id")
     @GetMapping("/couriers/{id}")
-    public CouriersDto couriersId (@PathVariable long id){
+    public CouriersDto couriersId (
+            @Parameter(description = "уникальний идентификатор пользователя")
+            @PathVariable long id){
 
         return couriersServices.getCouriersId(id);
     }
 
     //Получение курьера по телефону
+    @Operation(summary = "поиск курьера по номеру телефона")
     @GetMapping("/couriers/phone/{phone}")
     public CouriersDto couriersPhone (@PathVariable String phone){
 
@@ -65,6 +74,11 @@ public class DeliveryController {
     ////////////////////MyBatis///////////////////////
 
     //Поиск курьера по id
+    @Operation(summary = "поиск курьера по id через myBatis")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Данные получены"),
+            @ApiResponse(responseCode = "404", description = "Данные не найдены")
+    })
     @GetMapping("/myBatisId/{id}")
     public CouriersDto couriersMeBatisId (@PathVariable long id){
 
@@ -72,6 +86,7 @@ public class DeliveryController {
     }
 
     //Поиск курьера по статусу
+    @Operation(summary = "поиск курьера по номеру телефона через myBatis")
     @GetMapping("/myBatis/{status}")
     public CouriersDto couriersMeBatisStatus (@PathVariable String status){
 
