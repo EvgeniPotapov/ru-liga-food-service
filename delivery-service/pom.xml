@@ -13,6 +13,8 @@
     <name>delivery-service</name>
     <url>http://maven.apache.org</url>
 
+
+
     <dependencies>
 
         <dependency>
@@ -20,6 +22,11 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-aop</artifactId>
+            <version>2.7.5</version>
+        </dependency>
 
         <dependency>
             <groupId>org.springdoc</groupId>
@@ -27,27 +34,11 @@
             <version>1.7.0</version>
         </dependency>
 
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-actuator</artifactId>
-        </dependency>
-
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>3.8.1</version>
             <scope>test</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-jpa</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.postgresql</groupId>
-            <artifactId>postgresql</artifactId>
         </dependency>
 
         <dependency>
@@ -87,8 +78,6 @@
 
     </dependencies>
 
-
-
     <build>
         <plugins>
 
@@ -97,8 +86,8 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
-                    <source>11</source> <!-- depending on your project -->
-                    <target>11</target> <!-- depending on your project -->
+                    <source>11</source>
+                    <target>11</target>
                     <annotationProcessorPaths>
                         <path>
                             <groupId>org.projectlombok</groupId>
@@ -121,6 +110,4 @@
             </plugin>
         </plugins>
     </build>
-
-
 </project>

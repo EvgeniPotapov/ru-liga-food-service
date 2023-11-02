@@ -12,7 +12,8 @@ import javax.persistence.*;
 @Table(name = "restaurant")
 @AllArgsConstructor
 @NoArgsConstructor
-@Getter @Setter
+@Getter
+@Setter
 public class RestaurantEntity {
 
     @GeneratedValue(strategy = GenerationType.SEQUENCE,generator = "restor_seq-gen")
@@ -24,6 +25,4 @@ public class RestaurantEntity {
 
     private String status;
 
-//    @OneToMany(mappedBy = "restauran")
-//    List<RestauranMenuItemsEntity> menu;
 }
