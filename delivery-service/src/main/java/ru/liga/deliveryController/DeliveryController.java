@@ -15,14 +15,11 @@ import ru.liga.services.CouriersServices;
 @Tag(name = "API для взаимодействия с delivery-service")
 @RestController
 public class DeliveryController {
-    @Autowired
-    CouriersServices couriersServices;
-    @Autowired
-    FeignDelivery feignDelivery;
-    @Autowired
-    CouriersMapper couriersMapper;
 
-
+    @Autowired
+    private FeignDelivery feignDelivery;
+    @Autowired
+    private CouriersMapper couriersMapper;
 
 
     //Получение информации о расстоянии до ресторана и клиента
@@ -47,27 +44,6 @@ public class DeliveryController {
     public MenuItemsOrderDto getOrder (@PathVariable long id){
 
         return feignDelivery.getOrderItem(id);
-    }
-
-    /////////////////////////////////////////
-    /////////////Couriers///////////////////
-
-    //Получение информации о курьере по Id
-    @Operation(summary = "поиск курьера по id")
-    @GetMapping("/couriers/{id}")
-    public CouriersDto couriersId (
-            @Parameter(description = "уникальний идентификатор пользователя")
-            @PathVariable long id){
-
-        return couriersServices.getCouriersId(id);
-    }
-
-    //Получение курьера по телефону
-    @Operation(summary = "поиск курьера по номеру телефона")
-    @GetMapping("/couriers/phone/{phone}")
-    public CouriersDto couriersPhone (@PathVariable String phone){
-
-        return couriersServices.getCouriersPhone(phone);
     }
 
     ///////////////////////////////////////////////////

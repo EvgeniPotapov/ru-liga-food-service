@@ -16,9 +16,10 @@ import java.util.Set;
 public class CouriersEntity {
 
 
-    @Id
+
     @GeneratedValue(strategy = GenerationType.SEQUENCE,generator = "courier_seq-gen")
     @SequenceGenerator(name = "courier_seq-gen",sequenceName = "couriers_seq", allocationSize = 1)
+    @Id
     private long id;
 
     private String phone;
@@ -27,7 +28,7 @@ public class CouriersEntity {
 
     private String coordinates;
 
-    @Basic(fetch = FetchType.LAZY)
-    @OneToMany(mappedBy = "couriers")
-    private Set<OrdersEntity> orders;
+//    @Basic(fetch = FetchType.LAZY)
+//    @OneToMany(mappedBy = "couriers")
+//    private Set<OrdersEntity> orders;
 }
