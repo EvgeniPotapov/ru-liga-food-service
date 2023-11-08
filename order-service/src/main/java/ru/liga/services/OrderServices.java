@@ -1,13 +1,17 @@
 package ru.liga.services;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import ru.liga.entities.CustomersEntity;
-import ru.liga.entities.OrdersEntity;
+import ru.liga.entities.OrderEntity;
 import ru.liga.mappers.OrderMapper;
-import ru.liga.orderDto.CustomerDto;
 import ru.liga.orderDto.OrderDto;
 import ru.liga.repository.OrdersRepository;
+
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+import java.util.UUID;
 
 @Service
 public class OrderServices {
@@ -17,18 +21,41 @@ public class OrderServices {
     @Autowired
     OrderMapper orderMapper;
 
-    public OrderDto getOrderId (long id){
+    //метод сохраняющия звказ в базу данных
+    public void postOrder (OrderDto orderDto){
 
-        OrdersEntity ordersEntity = ordersRepository.findOrdersById(id);
-        OrderDto orderDto = orderMapper.entityToDto(ordersEntity);
+        OrderEntity orderEntity = orderMapper.dtoToEntity(orderDto);
+        orderEntity.setStatus("на модерации");
+        orderEntity.setTimeStamp(new Date());
+        ordersRepository.save(orderEntity);
+
+    }
+    //Метод выдает заказ по id
+    public OrderDto getOrderById(UUID id){
+
+        OrderEntity orderEntity = ordersRepository.findOrdersById(id);
+
+        OrderDto orderDto = orderMapper.entityToDto(orderEntity);
 
         return orderDto;
     }
 
-    public OrderDto detOrderStatus(String status){
+    //метод изменения статуса заказа
+    public void updateOrderById(UUID id,String status){
 
-        OrdersEntity ordersEntity = ordersRepository.findOrdersByStatus(status);
-        OrderDto orderDto = orderMapper.entityToDto(ordersEntity);
+        ordersRepository.updateStatusOrder(id,status);
+
+    }
+    //получение списска всех заказов
+    public List<OrderDto> getOrders (){
+
+        List<OrderDto> orderDto = new ArrayList<>();
+
+        List<OrderEntity> orderEntity = ordersRepository.findAll();
+
+        for (OrderEntity entity:orderEntity){
+            orderDto.add(orderMapper.entityToDto(entity));
+        }
         return orderDto;
     }
 }

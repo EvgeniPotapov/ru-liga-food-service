@@ -29,8 +29,7 @@
 		<module>order-service</module>
 		<module>migration</module>
 		<module>delivery-service</module>
-		<module>security-service</module>
-        <module>cloud-gateway</module>
+
     </modules>
 
 

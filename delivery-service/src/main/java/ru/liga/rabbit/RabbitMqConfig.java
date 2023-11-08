@@ -12,9 +12,9 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class RabbitMqConfig {
 
-    public static final String QUEUE="javaqueue";
-    public static final String EXCHANGE="javaexchange";
-    public static final String ROUTINGKEY="javarutingkey";
+    public static final String QUEUE="javaqueueDelivery";
+    public static final String EXCHANGE="javaexchangeDelivery";
+    public static final String ROUTINGKEY="javarutingkeyDelivery";
 
     //создание очереди
     @Bean

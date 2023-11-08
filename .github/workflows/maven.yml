@@ -2,7 +2,7 @@ name: Java CI with Maven
 
 on:
   push:
-    branches: [ "hometask-8" ]
+    branches: [ "final-test" ]
   pull_request:
     branches: [ "main" ]
 

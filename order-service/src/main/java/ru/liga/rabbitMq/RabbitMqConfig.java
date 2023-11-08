@@ -1,4 +1,4 @@
-package ru.liga.rabbit;
+package ru.liga.rabbitMq;
 
 
 import org.springframework.amqp.core.*;
@@ -9,28 +9,30 @@ import org.springframework.amqp.support.converter.MessageConverter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+
+
 @Configuration
 public class RabbitMqConfig {
 
-    public static final String QUEUE="javaqueueKithen";
-    public static final String EXCHANGE="javaexchangeKithen";
-    public static final String ROUTINGKEY="javarutingkeyKithen";
+    public static final String QUEUE="javaqueueOrder";
+    public static final String EXCHANGE="javaexchangeOrder";
+    public static final String ROUTINGKEY="javarutingkeyOrder";
 
-    //Создание очереди
+    //создание очереди
     @Bean
-    public Queue queue(){
+    public org.springframework.amqp.core.Queue queue(){
 
-        return new Queue(QUEUE);
+        return new org.springframework.amqp.core.Queue(QUEUE);
+
     }
-
-    //Создание обменника
+    //создание exchange
     @Bean
     public TopicExchange exchange (){
 
         return new TopicExchange(EXCHANGE);
     }
 
-    //Сщединение очереди и обменника
+    //создание соединения очереди и exchange
     @Bean
     public Binding binding(Queue queue, TopicExchange topicExchange){
         return BindingBuilder.bind(queue).to(topicExchange).with(ROUTINGKEY);

@@ -36,7 +36,7 @@ create table if not exists restauran_menu_items(
 create sequence if not exists order_seq;
 create table if not exists orders(
 
-    id bigint not null primary key,
+    id uuid not null primary key,
     customer_id bigint not null ,
     restauran_id bigint not null ,
     status varchar(40) not null,
@@ -48,10 +48,10 @@ create table if not exists orders(
     );
 
 create sequence if not exists order_item_seq;
-create table if not exists order_items(
-    id bigint not null primary key,
-    order_id bigint not null ,
-    restaurant_menu_item bibint not null,
+create table if not exists orders_items(
+    id uuid not null primary key,
+    order_id uuid not null ,
+    restaurant_menu_item bigint not null,
     price money not null  ,
     quantitu bigint not null,
     foreign key (order_id) references orders(id)

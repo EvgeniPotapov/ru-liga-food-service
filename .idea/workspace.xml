@@ -5,15 +5,119 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6028eece-2948-4731-ab72-1937a8964a64" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/delivery-service/src/main/java/ru/liga/deliveryController/CourierController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/delivery-service/src/test/java/ru/liga/deliveryController/CouriersControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/delivery-service/src/main/java/ru/liga/dto/OrderDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/delivery-service/src/main/java/ru/liga/entities/OrderItemsEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/delivery-service/src/main/java/ru/liga/repository/OrderRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kitchen-service/src/main/java/ru/liga/dto/OrderDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kitchen-service/src/main/java/ru/liga/mappers/OrderMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kitchen-service/src/main/java/ru/liga/rabbit/MessageListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kitchen-service/src/main/java/ru/liga/rabbit/UpdateStatusMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kitchen-service/src/main/java/ru/liga/repository/OrderRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kitchen-service/src/main/java/ru/liga/services/OrderServices.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kitchen-service/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-service/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/entities/OrderEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/entities/OrderItemsEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/orderDto/OrderItemDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/rabbitMq/CustomMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/rabbitMq/MessageListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/rabbitMq/RabbitMqConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/rabbitMq/UpdateStatusMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/maven.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/maven.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/delivery-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/delivery-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/delivery-service/src/main/java/ru/liga/aop/MyAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/delivery-service/src/main/java/ru/liga/aop/MyAspect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/delivery-service/src/main/java/ru/liga/deliveryController/DeliveryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/delivery-service/src/main/java/ru/liga/deliveryController/DeliveryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/delivery-service/src/main/java/ru/liga/entities/CouriersEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/delivery-service/src/main/java/ru/liga/entities/CouriersEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/delivery-service/src/main/java/ru/liga/repository/CouriersRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/delivery-service/src/main/java/ru/liga/repository/CouriersRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-gateway/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-gateway/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-gateway/src/main/java/ru/liga/CloudGatewayApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-gateway/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-gateway/src/test/java/ru/liga/CloudGatewayApplicationTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery-service/src/main/java/ru/liga/aop/MyAspect.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery-service/src/main/java/ru/liga/aop/Pointcuts.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery-service/src/main/java/ru/liga/deliveryController/CourierController.java" beforeDir="false" afterPath="$PROJECT_DIR$/delivery-service/src/main/java/ru/liga/deliveryController/CourierController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery-service/src/main/java/ru/liga/deliveryController/DeliveryController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery-service/src/main/java/ru/liga/dto/CouriersDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery-service/src/main/java/ru/liga/dto/CustomerAddress.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery-service/src/main/java/ru/liga/dto/InformationToCouriersDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery-service/src/main/java/ru/liga/dto/MenuItemsOrderDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery-service/src/main/java/ru/liga/dto/RestaurantAddress.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery-service/src/main/java/ru/liga/entities/CouriersEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery-service/src/main/java/ru/liga/entities/OrdersEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/kitchen-service/src/main/java/ru/liga/entities/OrderEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery-service/src/main/java/ru/liga/feignServise/FeignDelivery.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery-service/src/main/java/ru/liga/mappers/CourierMappers.java" beforeDir="false" afterPath="$PROJECT_DIR$/delivery-service/src/main/java/ru/liga/mappers/CourierMappers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery-service/src/main/java/ru/liga/myBatis/CouriersMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery-service/src/main/java/ru/liga/rabbit/CustomMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/delivery-service/src/main/java/ru/liga/rabbit/UpdateStatusMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery-service/src/main/java/ru/liga/rabbit/MessageListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/delivery-service/src/main/java/ru/liga/rabbit/MessageListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery-service/src/main/java/ru/liga/rabbit/RabbitMqConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/delivery-service/src/main/java/ru/liga/rabbit/RabbitMqConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery-service/src/main/java/ru/liga/repository/CouriersRepository.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/delivery-service/src/main/java/ru/liga/services/CouriersServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/delivery-service/src/main/java/ru/liga/services/CouriersServices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery-service/src/test/java/ru/liga/deliveryController/CouriersControllerTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kitchen-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/kitchen-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kitchen-service/src/main/java/ru/liga/dto/MenuItems.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kitchen-service/src/main/java/ru/liga/dto/MenuItemsOrderDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/delivery-service/src/main/java/ru/liga/dto/OrderItemDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kitchen-service/src/main/java/ru/liga/dto/OrderItemDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/kitchen-service/src/main/java/ru/liga/dto/OrderItemDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kitchen-service/src/main/java/ru/liga/dto/RestauranMenuItemsDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kitchen-service/src/main/java/ru/liga/dto/RestaurantDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kitchen-service/src/main/java/ru/liga/entities/OrderItemsEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/kitchen-service/src/main/java/ru/liga/entities/OrderItemsEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kitchen-service/src/main/java/ru/liga/entities/RestauranMenuItemsEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kitchen-service/src/main/java/ru/liga/entities/RestaurantEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kitchen-service/src/main/java/ru/liga/kitchenController/KitchenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/kitchen-service/src/main/java/ru/liga/kitchenController/KitchenController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kitchen-service/src/main/java/ru/liga/kitchenController/MyBatisController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kitchen-service/src/main/java/ru/liga/mappers/OrderItemMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kitchen-service/src/main/java/ru/liga/mappers/RestaurantItemMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kitchen-service/src/main/java/ru/liga/mappers/RestaurantMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kitchen-service/src/main/java/ru/liga/myBatis/OrderItemsMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kitchen-service/src/main/java/ru/liga/myBatis/RestaurantMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kitchen-service/src/main/java/ru/liga/myBatis/RestaurantMenuItemsMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kitchen-service/src/main/java/ru/liga/rabbit/CustomMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/kitchen-service/src/main/java/ru/liga/rabbit/CustomMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kitchen-service/src/main/java/ru/liga/rabbit/RabbitController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kitchen-service/src/main/java/ru/liga/rabbit/RabbitMqConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/kitchen-service/src/main/java/ru/liga/rabbit/RabbitMqConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kitchen-service/src/main/java/ru/liga/repository/OrderItemsRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kitchen-service/src/main/java/ru/liga/repository/RestauranMenuItemsRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kitchen-service/src/main/java/ru/liga/repository/RestauranRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kitchen-service/src/main/java/ru/liga/services/OrderItemServices.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kitchen-service/src/main/java/ru/liga/services/RestaurantItemServices.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kitchen-service/src/main/java/ru/liga/services/RestaurantServices.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kitchen-service/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migration/src/main/resources/db/changelog/v1/v1-create-table.sql" beforeDir="false" afterPath="$PROJECT_DIR$/migration/src/main/resources/db/changelog/v1/v1-create-table.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/entities/CustomersEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/entities/OrdersEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/delivery-service/src/main/java/ru/liga/entities/OrderEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/mappers/CustomerMappers.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/mappers/OrderMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/mappers/OrderMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/myBatis/CustomerMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/myBatis/OrdersMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/orderController/MyBatisController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/orderController/OrderController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/orderDto/CustomerDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/orderDto/MenuItems.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/orderDto/MenuRestoran.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/orderDto/OrderDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/orderDto/OrderDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/orderDto/OrderMenuDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/orderDto/PaymentToOrderDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/orderDto/Quantity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/orderDto/RestoranName.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/repository/CustomersRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/repository/OrdersRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/repository/OrdersRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/security/config/OAuth2ResourceServerSecurityConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/services/CustomerServices.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/services/OrderServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/services/OrderServices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-service/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-service/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-service/src/main/java/ru/liga/AuthServiceApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-service/src/main/java/ru/liga/config/OAuth2AuthServerSecurityConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-service/src/main/java/ru/liga/config/UserAuthenticationConverter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-service/src/main/java/ru/liga/config/UserAuthenticationProvider.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-service/src/main/java/ru/liga/dto/RegDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-service/src/main/java/ru/liga/dto/UserDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-service/src/main/java/ru/liga/model/CustomUserDetails.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-service/src/main/java/ru/liga/rest/AuthenticationController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-service/src/main/java/ru/liga/service/UserService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-service/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-service/src/main/resources/schema.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-service/src/test/java/ru/liga/AppTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,8 +128,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -91,9 +195,10 @@
       <recent name="D:\ru-liga-food-service\migration\src\main\resources\db\changelog" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="ru.liga.dto" />
-      <recent name="ru.liga.config" />
       <recent name="ru.liga.entities" />
+      <recent name="ru.liga.dto" />
+      <recent name="ru.liga.rabbit" />
+      <recent name="ru.liga.config" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -125,7 +230,20 @@
       <command value="mvn -B package --file pom.xml" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.CouriersControllerTest.deliveryControllerTestNotExistingCouriers">
+  <component name="RunManager" selected="Application.OrderApplication">
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ru.liga.App" />
+      <module name="notification-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.liga.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="DeliveryApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ru.liga.DeliveryApplication" />
       <module name="delivery-service" />
@@ -139,49 +257,28 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CouriersControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="delivery-service" />
+    <configuration name="KitchenApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ru.liga.KitchenApplication" />
+      <module name="kitchen-service" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ru.liga.deliveryController.*" />
+          <option name="PATTERN" value="ru.liga.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ru.liga.deliveryController" />
-      <option name="MAIN_CLASS_NAME" value="ru.liga.deliveryController.CouriersControllerTest" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CouriersControllerTest.DeliveryControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="delivery-service" />
+    <configuration name="OrderApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ru.liga.OrderApplication" />
+      <module name="order-service" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ru.liga.deliveryController.*" />
+          <option name="PATTERN" value="ru.liga.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ru.liga.deliveryController" />
-      <option name="MAIN_CLASS_NAME" value="ru.liga.deliveryController.CouriersControllerTest" />
-      <option name="METHOD_NAME" value="DeliveryControllerTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CouriersControllerTest.deliveryControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="delivery-service" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.liga.deliveryController.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ru.liga.deliveryController" />
-      <option name="MAIN_CLASS_NAME" value="ru.liga.deliveryController.CouriersControllerTest" />
-      <option name="METHOD_NAME" value="deliveryControllerTest" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -211,11 +308,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.CouriersControllerTest.deliveryControllerTestNotExistingCouriers" />
+        <item itemvalue="Application.OrderApplication" />
+        <item itemvalue="Application.KitchenApplication" />
         <item itemvalue="Application.DeliveryApplication" />
-        <item itemvalue="JUnit.CouriersControllerTest" />
-        <item itemvalue="JUnit.CouriersControllerTest.deliveryControllerTest" />
-        <item itemvalue="JUnit.CouriersControllerTest.DeliveryControllerTest" />
+        <item itemvalue="Application.App" />
+        <item itemvalue="JUnit.CouriersControllerTest.deliveryControllerTestNotExistingCouriers" />
       </list>
     </recent_temporary>
   </component>
@@ -262,8 +359,15 @@
       <pinned-members>
         <PinnedItemInfo parentTag="org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint" memberName="signature" />
         <PinnedItemInfo parentTag="org.springframework.aop.framework.JdkDynamicAopProxy" memberName="proxiedInterfaces" />
+        <PinnedItemInfo parentTag="ru.liga.orderDto.OrderDto" memberName="timeStamp" />
       </pinned-members>
     </pin-to-top-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="orderEntity" />
+        <watch expression="orderEntity" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

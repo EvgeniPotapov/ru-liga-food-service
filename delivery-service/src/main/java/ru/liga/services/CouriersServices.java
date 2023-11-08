@@ -3,36 +3,40 @@ package ru.liga.services;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import ru.liga.dto.CouriersDto;
-import ru.liga.entities.CouriersEntity;
+import ru.liga.dto.OrderDto;
+import ru.liga.entities.OrderEntity;
 import ru.liga.mappers.CourierMappers;
-import ru.liga.repository.CouriersRepository;
+import ru.liga.repository.OrderRepository;
 
-import java.util.NoSuchElementException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.UUID;
+
 
 @Service
 @Slf4j
 public class CouriersServices {
     @Autowired
-    CouriersRepository couriersRepository;
+    OrderRepository orderRepository;
     @Autowired
     CourierMappers courierMappers;
 
-    public CouriersDto getCouriersId(long id){
+    public List<OrderDto> getOrders (){
 
+        List<OrderDto> orderDto = new ArrayList<>();
 
-        CouriersEntity couriersEntity = couriersRepository.findCouriersById(id);
-        CouriersDto couriersDto = courierMappers.entityToDto(couriersEntity);
+        List<OrderEntity> orderEntity = orderRepository.findAll();
 
-        return couriersDto;
+        for (OrderEntity entity:orderEntity){
+            orderDto.add(courierMappers.entityToDto(entity));
+        }
+        return orderDto;
     }
 
-    public CouriersDto getCouriersPhone(String phone){
-        CouriersDto couriersDto;
+    //метод изменения статуса заказа
+    public void updateOrderById(UUID id, String status){
 
-        CouriersEntity couriersEntity = couriersRepository.findCouriersByPhone(phone);
-        couriersDto = courierMappers.entityToDto(couriersEntity);
+        orderRepository.updateStatusOrder(id, status);
 
-        return couriersDto;
     }
 }

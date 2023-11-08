@@ -1,7 +1,5 @@
 server:
-    port: 8090
-    forward-headers-strategy: framework
-
+    port: 8081
 spring:
     datasource:
         password: postgres

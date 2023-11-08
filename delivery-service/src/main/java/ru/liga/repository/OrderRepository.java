@@ -1,6 +1,5 @@
 package ru.liga.repository;
 
-
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
@@ -13,22 +12,13 @@ import java.util.List;
 import java.util.UUID;
 
 @Repository
-public interface OrdersRepository extends JpaRepository<OrderEntity, UUID> {
+public interface OrderRepository extends JpaRepository<OrderEntity, UUID> {
 
+    @Override
+    List<OrderEntity> findAll();
 
-    //Запросы на получение заказа по id
-    OrderEntity findOrdersById(UUID id);
-
-    //Сохранение заказа
-    OrderEntity save(OrderEntity orderEntity);
-
-    //изменение статуса заказа
     @Modifying
     @Transactional
     @Query("update OrderEntity ord set ord.status = :status where ord.id = :id")
     void updateStatusOrder (@Param("id")UUID id, @Param("status") String status);
-
-    //получение списка всех заказов
-    @Override
-    List<OrderEntity> findAll();
 }
