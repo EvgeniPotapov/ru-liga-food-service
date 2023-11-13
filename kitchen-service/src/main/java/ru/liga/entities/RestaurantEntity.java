@@ -6,39 +6,29 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
-import java.util.Date;
 import java.util.List;
 import java.util.UUID;
 
-
 @Entity
-@Table(name = "orders")
+@Table(name = "restaurant")
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
-public class OrderEntity {
+public class RestaurantEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private UUID id;
 
-    @Column(name = "customer_id")
-    private long customerId;
-
-    @Column(name = "restauran_id")
-    private long restauranId;
+    private String address;
 
     private String status;
 
-    @Column(name = "courier_id")
-    private long courierId;
-
-    @Column(name = "time_stamp")
-    private Date timeStamp;
+    @Column(name = "name_restaurant")
+    private String nameRestaurant;
 
     @OneToMany(cascade = CascadeType.ALL)
-    @JoinColumn(name = "order_id")
-    private List<OrderItemsEntity> orders;
-
+    @JoinColumn(name = "restauran_id")
+    private List<RestauranMenuItemsEntity> listMenuItems;
 }

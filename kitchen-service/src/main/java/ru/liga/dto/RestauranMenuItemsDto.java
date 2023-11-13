@@ -1,23 +1,22 @@
-package ru.liga.orderDto;
+package ru.liga.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.persistence.Column;
 import java.math.BigDecimal;
-import java.util.UUID;
-
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
-public class OrderItemDto {
+public class RestauranMenuItemsDto {
 
-    private long restaurantMenuItemsId;
+    private String nameItems;
 
     private BigDecimal price;
 
-    private int quantity;
+    private String image;
+
+    private String description;
 }

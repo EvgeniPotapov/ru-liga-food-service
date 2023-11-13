@@ -8,7 +8,7 @@ public class MessageListener {
 
     //Принимаем сообщение из сервиса кухни
     @RabbitListener(queues = "javaqueueKithen")
-    public void listener( UpdateStatusMessage message){
+    public void listener( CustomMessage message){
 
         System.out.println(message);
     }

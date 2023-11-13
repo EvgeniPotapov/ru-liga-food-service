@@ -15,17 +15,18 @@ create table if not exists customers(
 
 create sequence if not exists restor_seq;
 create table if not exists restaurant(
-    id bigint not null primary key,
+    id uuid not null primary key,
     address varchar(150) not null,
-    status varchar(40) not null
+    status varchar(40) not null,
+    name_restaurant varchar(40) not null UNIQUE
     );
 
 create sequence if not exists restor_menu_seq;
 create table if not exists restauran_menu_items(
 
-    id bigint not null primary key ,
-    restauran_id bigint not null ,
-    nameItems varchar(100) not null,
+    id uuid not null primary key ,
+    restauran_id uuid not null ,
+    name_items varchar(100) not null,
     price money not null,
     image varchar(50) ,
     description varchar(200) ,
@@ -52,8 +53,8 @@ create table if not exists orders_items(
     id uuid not null primary key,
     order_id uuid not null ,
     restaurant_menu_item bigint not null,
-    price money not null  ,
-    quantitu bigint not null,
+    price numeric not null  ,
+    quantity bigint not null,
     foreign key (order_id) references orders(id)
     );
 

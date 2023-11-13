@@ -4,14 +4,19 @@ import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.bind.annotation.PathVariable;
+import ru.liga.dto.RestauranMenuItemsDto;
+import ru.liga.dto.RestaurantDto;
+import ru.liga.rabbit.CustomMessage;
 import ru.liga.rabbit.RabbitMqConfig;
-import ru.liga.rabbit.UpdateStatusMessage;
 import ru.liga.services.OrderServices;
+import ru.liga.services.RestaurantServices;
 
 
+import java.math.BigDecimal;
 import java.util.UUID;
 
 @RestController
+@RequestMapping("/kitchen")
 public class KitchenController {
 
     @Autowired
@@ -19,34 +24,66 @@ public class KitchenController {
     @Autowired
     private RabbitTemplate template;
 
-    //Контроллеры для изменения статуса заказа
+    @Autowired
+    private RestaurantServices restaurantServices;
 
-    @PutMapping("/kitchen/{id}/accept")
+    ////////////////////////////Контроллеры для изменения статуса заказа////////////////////////////////////////
+
+    @PutMapping("/{id}/accept")
     public void updateOrderStatusAccept (@PathVariable UUID id){
         String status = "accept";
         orderServices.updateOrderStatus(id, status );
 
-        UpdateStatusMessage message = new UpdateStatusMessage(id,"статус изменён на accept ");
+        //отправка сообщения об изменении статуса в order-service
+        CustomMessage message = new CustomMessage(id,"статус изменён на accept ");
         template.convertAndSend(RabbitMqConfig.EXCHANGE,RabbitMqConfig.ROUTINGKEY,message);
     }
-    @PutMapping("/kitchen/{id}/decline")
+    @PutMapping("/{id}/decline")
     public void updateOrderStatusDecline (@PathVariable UUID id){
         String status = "decline";
         orderServices.updateOrderStatus(id, status );
 
-        UpdateStatusMessage message = new UpdateStatusMessage(id,"статус изменён на decline ");
+        //отправка сообщения об изменении статуса в order-service
+        CustomMessage message = new CustomMessage(id,"статус изменён на decline ");
         template.convertAndSend(RabbitMqConfig.EXCHANGE,RabbitMqConfig.ROUTINGKEY,message);
     }
-    @PutMapping("/kitchen/{id}/ready")
+    @PutMapping("/{id}/ready")
     public void updateOrderStatusReady  (@PathVariable UUID id){
         String status = "ready";
         orderServices.updateOrderStatus(id, status );
 
-        UpdateStatusMessage message = new UpdateStatusMessage(id,"статус изменён на ready ");
+        //отправка сообщения об изменении статуса в order-service
+        CustomMessage message = new CustomMessage(id,"статус изменён на ready ");
         template.convertAndSend(RabbitMqConfig.EXCHANGE,RabbitMqConfig.ROUTINGKEY,message);
 
-        UpdateStatusMessage messageReady = new UpdateStatusMessage(id,"заказ готов к доставке");
+        //отправка сообщения о готовности заказа к доставке в delivery-service
+        CustomMessage messageReady = new CustomMessage(id,"заказ готов к доставке");
         template.convertAndSend("javaexchangeDelivery","javarutingkeyDelivery",messageReady);
+    }
+
+    ///////////////////////////////////метод сохранения ресторана в базу данных/////////////////////////////////////////
+    @PostMapping("/restaurant/save")
+    public void saveRestaurantAndMenu(@RequestBody RestaurantDto restaurantDto){
+
+        restaurantServices.saveRestaurant(restaurantDto);
+    }
+
+    ///////////////////////////////////метод сохранения меню ресторана по названию ресторана////////////////////////////
+    @PostMapping("/menu/save/{nameRestaurant}")
+    public void saveMenuRestaurant(@PathVariable String nameRestaurant,
+                                   @RequestBody RestauranMenuItemsDto restauranMenuItemsDto){
+
+        restaurantServices.saveMenuRestaurant(nameRestaurant,restauranMenuItemsDto);
+    }
+
+    /////////////////Изменение стоимости блюда по названию ресторана и названию блюда///////////////////////////////////
+    @PutMapping("/menu/update/{nameRestaurant}/{nameItems}/{price}")
+    public void updatePrice (@PathVariable String nameRestaurant,
+                             @PathVariable String nameItems,
+                             @PathVariable BigDecimal price){
+
+        restaurantServices.updatePriceByNameItems(nameRestaurant,nameItems,price);
+
     }
 
 }

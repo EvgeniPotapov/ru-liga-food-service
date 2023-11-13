@@ -1,11 +1,13 @@
 package ru.liga.services;
 
 
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import ru.liga.entities.OrderEntity;
 import ru.liga.mappers.OrderMapper;
 import ru.liga.orderDto.OrderDto;
+import ru.liga.rabbitMq.CustomMessage;
 import ru.liga.repository.OrdersRepository;
 
 import java.util.ArrayList;
@@ -21,7 +23,10 @@ public class OrderServices {
     @Autowired
     OrderMapper orderMapper;
 
-    //метод сохраняющия звказ в базу данных
+    @Autowired
+    private RabbitTemplate template;
+
+    ///////////////////////////метод сохраняющия звказ в базу данных//////////////////////////////
     public void postOrder (OrderDto orderDto){
 
         OrderEntity orderEntity = orderMapper.dtoToEntity(orderDto);
@@ -29,8 +34,13 @@ public class OrderServices {
         orderEntity.setTimeStamp(new Date());
         ordersRepository.save(orderEntity);
 
+        ///////////////////////отправка сообщения в kitchen-service/////////////////////////////////
+
+        CustomMessage customMessage = new CustomMessage(orderEntity.getId(), "Доступен новый заказ");
+        template.convertAndSend("javaexchangeOrder", "javarutingkeyOrder", customMessage);
+
     }
-    //Метод выдает заказ по id
+    //////////////////////////////Метод выдает заказ по id//////////////////////////////////////////////
     public OrderDto getOrderById(UUID id){
 
         OrderEntity orderEntity = ordersRepository.findOrdersById(id);
@@ -40,13 +50,13 @@ public class OrderServices {
         return orderDto;
     }
 
-    //метод изменения статуса заказа
+    ///////////////////////////////метод изменения статуса заказа//////////////////////////////////
     public void updateOrderById(UUID id,String status){
 
         ordersRepository.updateStatusOrder(id,status);
 
     }
-    //получение списска всех заказов
+    ///////////////////////////////////получение списска всех заказов//////////////////////////////////////
     public List<OrderDto> getOrders (){
 
         List<OrderDto> orderDto = new ArrayList<>();

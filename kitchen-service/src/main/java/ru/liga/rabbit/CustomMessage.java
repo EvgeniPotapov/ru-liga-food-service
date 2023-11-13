@@ -3,6 +3,7 @@ package ru.liga.rabbit;
 import lombok.*;
 
 import java.util.Date;
+import java.util.UUID;
 
 @Data
 @AllArgsConstructor
@@ -10,7 +11,7 @@ import java.util.Date;
 @ToString
 public class CustomMessage {
 
-    private long restauranId;
+    private UUID orderId;;
 
     private String message;
 

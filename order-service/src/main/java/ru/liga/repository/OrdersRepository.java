@@ -16,19 +16,19 @@ import java.util.UUID;
 public interface OrdersRepository extends JpaRepository<OrderEntity, UUID> {
 
 
-    //Запросы на получение заказа по id
+    //////////////////////////Запросы на получение заказа по id////////////////////////////////
     OrderEntity findOrdersById(UUID id);
 
-    //Сохранение заказа
+    //////////////////////////Сохранение заказа//////////////////////////////////////////////
     OrderEntity save(OrderEntity orderEntity);
 
-    //изменение статуса заказа
+    //////////////////////////изменение статуса заказа//////////////////////////////////////
     @Modifying
     @Transactional
     @Query("update OrderEntity ord set ord.status = :status where ord.id = :id")
     void updateStatusOrder (@Param("id")UUID id, @Param("status") String status);
 
-    //получение списка всех заказов
+    ///////////////////////////////получение списка всех заказов//////////////////////////////
     @Override
     List<OrderEntity> findAll();
 }

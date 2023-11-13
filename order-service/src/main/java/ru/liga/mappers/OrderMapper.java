@@ -10,6 +10,8 @@ import ru.liga.orderDto.OrderItemDto;
 @Mapper(componentModel = "spring")
 public interface OrderMapper {
 
+    /////////////////////////методы для перевода из Dto в Entity////////////////////////////
+
     OrderEntity dtoToEntity (OrderDto orderDto);
 
     OrderDto entityToDto (OrderEntity orderEntity);
