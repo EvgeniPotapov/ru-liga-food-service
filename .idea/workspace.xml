@@ -5,35 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6028eece-2948-4731-ab72-1937a8964a64" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/kitchen-service/src/main/java/ru/liga/dto/RestauranMenuItemsDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kitchen-service/src/main/java/ru/liga/dto/RestaurantDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kitchen-service/src/main/java/ru/liga/entities/RestauranMenuItemsEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kitchen-service/src/main/java/ru/liga/entities/RestaurantEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kitchen-service/src/main/java/ru/liga/mappers/RestaurantMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kitchen-service/src/main/java/ru/liga/repository/RestaurantRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kitchen-service/src/main/java/ru/liga/services/RestaurantServices.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/aop/MyAspect.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/aop/Pointcuts.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/controller/OrderController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kitchen-service/src/main/java/ru/liga/aop/MyAspect.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kitchen-service/src/main/java/ru/liga/aop/Pointcuts.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/maven.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/maven.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kitchen-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/kitchen-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kitchen-service/src/main/java/ru/liga/entities/OrderEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/kitchen-service/src/main/java/ru/liga/entities/OrderEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kitchen-service/src/main/java/ru/liga/kitchenController/KitchenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/kitchen-service/src/main/java/ru/liga/kitchenController/KitchenController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kitchen-service/src/main/java/ru/liga/mappers/OrderMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kitchen-service/src/main/java/ru/liga/rabbit/CustomMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/kitchen-service/src/main/java/ru/liga/rabbit/CustomMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kitchen-service/src/main/java/ru/liga/rabbit/UpdateStatusMessage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kitchen-service/src/main/java/ru/liga/services/OrderServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/kitchen-service/src/main/java/ru/liga/services/OrderServices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kitchen-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/kitchen-service/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/migration/src/main/resources/db/changelog/v1/v1-create-table.sql" beforeDir="false" afterPath="$PROJECT_DIR$/migration/src/main/resources/db/changelog/v1/v1-create-table.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/entities/OrderEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/entities/OrderEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/mappers/OrderMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/mappers/OrderMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/orderDto/OrderItemDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/orderDto/OrderItemDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/rabbitMq/CustomMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/rabbitMq/CustomMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/rabbitMq/MessageListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/rabbitMq/MessageListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/rabbitMq/UpdateStatusMessage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/repository/OrdersRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/repository/OrdersRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/services/OrderServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/ru/liga/services/OrderServices.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,6 +88,7 @@
       <recent name="D:\ru-liga-food-service\migration\src\main\resources\db\changelog" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ru.liga.aop" />
       <recent name="ru.liga.entities" />
       <recent name="ru.liga.dto" />
       <recent name="ru.liga.rabbit" />
@@ -269,11 +247,6 @@
           <properties class="org.springframework.amqp.AmqpConnectException" package="org.springframework.amqp" />
           <option name="timeStamp" value="1" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/order-service/src/main/java/ru/liga/controller/OrderController.java</url>
-          <line>29</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <pin-to-top-manager>

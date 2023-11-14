@@ -26,7 +26,7 @@ create table if not exists restauran_menu_items(
 
     id uuid not null primary key ,
     restauran_id uuid not null ,
-    name_items varchar(100) not null,
+    name_items varchar(100) not null UNIQUE,
     price money not null,
     image varchar(50) ,
     description varchar(200) ,
