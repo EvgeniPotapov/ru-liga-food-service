@@ -47,8 +47,8 @@ public class OrderController {
     ////////////////////////////////получение списка всех заказов/////////////////////////////////////
 
     @GetMapping({"/orders"})
-    public List<OrderDto> getOrderBy() {
-        return orderServices.getOrders();
+    public List<OrderDto> orders() {
+        return orderServices.ordersList();
     }
 
     ///////////////////////////////Ответ когда метод getOrderById равен null /////////////////////////////////////

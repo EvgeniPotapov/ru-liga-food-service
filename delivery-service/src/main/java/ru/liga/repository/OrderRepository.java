@@ -14,11 +14,11 @@ import java.util.UUID;
 @Repository
 public interface OrderRepository extends JpaRepository<OrderEntity, UUID> {
 
-    @Override
-    List<OrderEntity> findAll();
-
     @Modifying
     @Transactional
     @Query("update OrderEntity ord set ord.status = :status where ord.id = :id")
     void updateStatusOrder (@Param("id")UUID id, @Param("status") String status);
+
+
+    OrderEntity findOrderById (UUID id);
 }

@@ -1,19 +1,18 @@
 package ru.liga.mappers;
 
 import org.mapstruct.Mapper;
+import ru.liga.dto.CouriersDto;
 import ru.liga.dto.OrderDto;
 import ru.liga.dto.OrderItemDto;
+import ru.liga.entities.CourierEntity;
 import ru.liga.entities.OrderEntity;
 import ru.liga.entities.OrderItemsEntity;
 
 @Mapper(componentModel = "spring")
 public interface CourierMappers {
 
-    OrderEntity dtoToEntity (OrderDto orderDto);
+    CourierEntity dtoToEntity (CouriersDto couriersDto);
 
-    OrderDto entityToDto (OrderEntity orderEntity);
+    CouriersDto entityToDto (CourierEntity courierEntity);
 
-    OrderItemsEntity dtoToEntity (OrderItemDto orderItemDto);
-
-    OrderItemDto dtoToEntity (OrderItemsEntity orderItemsEntity);
 }

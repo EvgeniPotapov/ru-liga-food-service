@@ -57,7 +57,7 @@ public class OrderServices {
 
     }
     ///////////////////////////////////получение списска всех заказов//////////////////////////////////////
-    public List<OrderDto> getOrders (){
+    public List<OrderDto> ordersList (){
 
         List<OrderDto> orderDto = new ArrayList<>();
 

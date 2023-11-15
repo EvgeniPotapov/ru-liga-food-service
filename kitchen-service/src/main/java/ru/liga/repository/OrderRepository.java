@@ -18,4 +18,5 @@ public interface OrderRepository extends JpaRepository<OrderEntity,UUID> {
     @Transactional
     @Query("update OrderEntity ord set ord.status = :status where ord.id = :id")
     void updateStatusOrder (@Param("id") UUID id, @Param("status") String status);
+
 }

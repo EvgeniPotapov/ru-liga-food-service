@@ -1,8 +1,9 @@
 package ru.liga.services;
 
+import lombok.extern.slf4j.Slf4j;
+import org.apache.ibatis.javassist.NotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.PathVariable;
 import ru.liga.dto.RestauranMenuItemsDto;
 import ru.liga.dto.RestaurantDto;
 import ru.liga.entities.RestauranMenuItemsEntity;
@@ -14,6 +15,7 @@ import java.math.BigDecimal;
 import java.util.UUID;
 
 @Service
+@Slf4j
 public class RestaurantServices {
 
     @Autowired
@@ -38,12 +40,30 @@ public class RestaurantServices {
 
     }
 
-    /////////////////////получение id ресторана по его названию и изменение стоимости блюда/////////////////////////////
+    /////////////////////////////////////////изменение стоимости блюда///////////////////////////////////////
     public void updatePriceByNameItems (String nameRestaurant,
                                         String nameItems,
-                                        BigDecimal price){
+                                        BigDecimal price)  {
+        try {
+        log.info("попытка изменения стоимости блюда");
         UUID restauranId = restaurantRepository.getIdByName(nameRestaurant);
-        restaurantRepository.updatePriceRestauranMenuItem(nameItems,price,restauranId);
+        UUID menuId=restaurantRepository.getIdByMenuName(restauranId,nameItems);
+
+        if (restauranId==null){
+            log.info("Ресторана названием {} не существует",nameRestaurant);
+
+                throw new NotFoundException("not found");
+        }
+        if (menuId==null){
+            log.info("блюда с названием {} не существует",nameItems);
+            throw new NotFoundException("not found");
+        }
+        restaurantRepository.updatePriceRestauranMenuItem(menuId,price);
+        log.info("Стоимость на блюдо {} измененна",nameItems);
+
+        } catch (NotFoundException e) {
+            throw new RuntimeException(e);
+        }
 
     }
 }

@@ -32,7 +32,7 @@ public class OrderEntity {
     private String status;
 
     @Column(name = "courier_id")
-    private long courierId;
+    private Long courierId;
 
     @Column(name = "time_stamp")
     private Date timeStamp;

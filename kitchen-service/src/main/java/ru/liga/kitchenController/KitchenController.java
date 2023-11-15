@@ -90,5 +90,12 @@ public class KitchenController {
 
     }
 
+    @ExceptionHandler(NotFoundException.class)
+    public ResponseEntity<ErrorMessage> handleException(NotFoundException exception){
+        return ResponseEntity
+                .status(HttpStatus.NOT_FOUND)
+                .body(new ErrorMessage(exception.getMessage()));
+    }
+
 
 }

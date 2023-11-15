@@ -3,7 +3,9 @@ create table if not exists couriers(
     id bigint not null primary key,
     phone varchar(150) not null,
     status varchar(40) not null,
-    coordinates varchar (100) not null
+    coordinates varchar (100) not null,
+    first_name varchar (100) not null,
+    last_name varchar (100) not null
     );
 create sequence if not exists custom_seq;
 create table if not exists customers(

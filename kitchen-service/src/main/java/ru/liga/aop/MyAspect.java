@@ -8,6 +8,8 @@ import org.springframework.stereotype.Component;
 import ru.liga.dto.RestauranMenuItemsDto;
 import ru.liga.dto.RestaurantDto;
 
+import java.math.BigDecimal;
+
 @Component
 @Aspect
 @Slf4j
@@ -54,4 +56,5 @@ public class MyAspect {
             log.info("блюдо {} не добавлено",restauranMenuItemsDto.getNameItems());
         }
     }
+
 }

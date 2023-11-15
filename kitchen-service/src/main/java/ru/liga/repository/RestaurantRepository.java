@@ -29,14 +29,18 @@ public interface RestaurantRepository extends JpaRepository<RestaurantEntity,Lon
     @Query("select res.id from RestaurantEntity res where LOWER(res.nameRestaurant) = LOWER(:nameRestaurant)")
     UUID getIdByName (@Param("nameRestaurant") String nameRestaurant);
 
-    //////////////////////////Изменение стоимости блюда по Id ресторана и названию блюда ///////////////////////////////
+    //////////////////////////Поиск id блюда по его названию///////////////////////////////
+    @Transactional
+    @Query("select res.id from RestauranMenuItemsEntity res where res.restauranId = :restauranId AND LOWER(res.nameItems) = LOWER(:nameItems)")
+    UUID getIdByMenuName (@Param("restauranId") UUID restauranId,
+                           @Param("nameItems") String nameItems);
+
+    //////////////////////////Изменение стоимости блюда по Id блюда ///////////////////////////////
     @Modifying
     @Transactional
-    @Query("update RestauranMenuItemsEntity res set res.price = :price " +
-            "where res.restauranId = :restauranId AND LOWER(res.nameItems) = LOWER(:nameItems)")
-    void updatePriceRestauranMenuItem (@Param("nameItems") String nameItems,
-                                       @Param("price") BigDecimal price,
-                                       @Param("restauranId") UUID restauranId);
+    @Query("update RestauranMenuItemsEntity res set res.price = :price where res.id = :id")
+    void updatePriceRestauranMenuItem (@Param("id") UUID id,
+                                       @Param("price") BigDecimal price);
 }
 
 

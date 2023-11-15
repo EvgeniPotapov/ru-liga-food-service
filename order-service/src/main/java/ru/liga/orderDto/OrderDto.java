@@ -23,7 +23,7 @@ public class OrderDto {
 
     private String status;
 
-    private long courierId;
+    private Long courierId;
 
     private Date timeStamp;
 

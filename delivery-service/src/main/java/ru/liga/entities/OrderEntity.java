@@ -33,7 +33,7 @@ public class OrderEntity {
     @Column(name = "courier_id")
     private long courierId;
 
-    @Column(name = "timestamp")
+    @Column(name = "time_stamp")
     private Date timeStamp;
 
     @OneToMany(cascade = CascadeType.ALL)
